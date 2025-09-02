@@ -1,0 +1,16 @@
+@media (max-width: 540px) {
+    .nav-header {
+        display: none;
+        width: 50%;
+    }
+    .header-page {
+        justify-content: end;
+        gap: 2rem;
+    }
+    .div-logo{
+        display: block;
+    }
+    .menu-grid {
+        display: block;
+    }
+}

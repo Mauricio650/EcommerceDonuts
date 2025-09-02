@@ -1,0 +1,21 @@
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(10px);
+        scale: 1.2;
+    }
+}
+
+
+.scroll {
+    animation: moveUpDown 1s linear 20ms infinite alternate;
+}
+
+
+@media (max-width:400px) {
+    .container-slogan {
+        margin-top: 2rem;
+    }
+}

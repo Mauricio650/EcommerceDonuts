@@ -1,0 +1,253 @@
+[
+    {
+      "id": 0,
+      "type" : "donuts",
+      "nameProduct": "Donut de avellana",
+      "priceProduct": 10000,
+      "unitsProduct": 1,
+      "flavors": [],
+      "ToppingsProduct": "chispas con albaricoque",
+      "imgProduct": "https://www.dunkin.pe/media/catalog/product/d/o/donuts-x12-clasicas.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700&format=jpeg"
+    },
+    {
+      "id": 1,
+      "type" : "donuts",
+      "nameProduct": "Donut glaseada",
+      "priceProduct": 9500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "glaseado de vainilla",
+      "imgProduct": "img/product.webp"
+    },
+    {
+      "id": 2,
+      "type" : "donuts",
+      "nameProduct": "Donut de chocolate",
+      "priceProduct": 10500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "chips de chocolate"
+    },
+    {
+      "id": 3,
+      "type" : "donuts",
+      "nameProduct": "Donut rellena de fresa",
+      "priceProduct": 11000,
+      "unitsProduct": 1,
+      "ToppingsProduct": "azúcar glass"
+    },
+    {
+      "id": 4,
+      "type" : "donuts",
+      "nameProduct": "Donut de caramelo",
+      "priceProduct": 12000,
+      "unitsProduct": 1,
+      "ToppingsProduct": "salsa de caramelo"
+    },
+    {
+      "id": 5,
+      "type" : "donuts",
+      "nameProduct": "Donut de coco",
+      "priceProduct": 11500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "coco rallado"
+    },
+    {
+      "id": 6,
+      "type" : "donuts",
+      "nameProduct": "Donut rellena de arequipe",
+      "priceProduct": 12500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "azúcar pulverizada"
+    },
+    {
+      "id": 7,
+      "type" : "donuts",
+      "nameProduct": "Donut marmolada",
+      "priceProduct": 11800,
+      "unitsProduct": 1,
+      "ToppingsProduct": "mezcla de chocolate y vainilla"
+    },
+    {
+      "id": 8,
+      "type" : "donuts",
+      "nameProduct": "Donut de frutos rojos",
+      "priceProduct": 12800,
+      "unitsProduct": 1,
+      "ToppingsProduct": "arándanos y frambuesas"
+    },
+    {
+      "id": 9,
+      "type" : "donuts",
+      "nameProduct": "Donut de pistacho",
+      "priceProduct": 13500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "trocitos de pistacho"
+    },
+    {
+      "id": 10,
+      "type" : "donuts",
+      "nameProduct": "Donut de almendra",
+      "priceProduct": 14000,
+      "unitsProduct": 1,
+      "ToppingsProduct": "láminas de almendra"
+    },
+    {
+      "id": 11,
+      "type" : "donuts",
+      "nameProduct": "Donut de café",
+      "priceProduct": 14500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "glaseado de moka"
+    },
+    {
+      "id": 12,
+      "type" : "donuts",
+      "nameProduct": "Donut arcoiris",
+      "priceProduct": 15000,
+      "unitsProduct": 1,
+      "ToppingsProduct": "sprinkles de colores"
+    },
+    {
+      "id": 13,
+      "type" : "donuts",
+      "nameProduct": "Donut rellena de limón",
+      "priceProduct": 13500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "glaseado ácido"
+    },
+    {
+      "id": 14,
+      "type" : "donuts",
+      "nameProduct": "Donut de manzana canela",
+      "priceProduct": 14200,
+      "unitsProduct": 1,
+      "ToppingsProduct": "azúcar y canela"
+    },
+    {
+      "id": 15,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut rellena de maracuyá",
+      "priceProduct": 14800,
+      "unitsProduct": 1,
+      "ToppingsProduct": "glaseado tropical"
+    },
+    {
+      "id": 16,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut de galleta oreo",
+      "priceProduct": 15200,
+      "unitsProduct": 1,
+      "ToppingsProduct": "trocitos de oreo"
+    },
+    {
+      "id": 17,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut de miel",
+      "priceProduct": 13000,
+      "unitsProduct": 1,
+      "ToppingsProduct": "baño de miel natural"
+    },
+    {
+      "id": 18,
+      "nameProduct": "Donut rellena de crema pastelera",
+      "priceProduct": 14500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "azúcar glass"
+    },
+    {
+      "id": 19,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut de mora",
+      "priceProduct": 13800,
+      "unitsProduct": 1,
+      "ToppingsProduct": "salsa de mora"
+    },
+    {
+      "id": 20,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut de banano",
+      "priceProduct": 12500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "chips de banano"
+    },
+    {
+      "id": 21,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut rellena de nutella",
+      "priceProduct": 16000,
+      "unitsProduct": 1,
+      "ToppingsProduct": "chispas de chocolate"
+    },
+    {
+      "id": 22,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut de chicle",
+      "priceProduct": 12000,
+      "unitsProduct": 1,
+      "ToppingsProduct": "glaseado sabor chicle"
+    },
+    {
+      "id": 23,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut de marshmallow",
+      "priceProduct": 15000,
+      "unitsProduct": 1,
+      "ToppingsProduct": "mini malvaviscos"
+    },
+    {
+      "id": 24,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut rellena de arándanos",
+      "priceProduct": 14500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "glaseado morado"
+    },
+    {
+      "id": 25,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut de chocolate blanco",
+      "priceProduct": 15500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "virutas de chocolate blanco"
+    },
+    {
+      "id": 26,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut rellena de queso crema",
+      "priceProduct": 15000,
+      "unitsProduct": 1,
+      "ToppingsProduct": "glaseado suave"
+    },
+    {
+      "id": 27,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut rellena de frutos secos",
+      "priceProduct": 16500,
+      "unitsProduct": 1,
+      "ToppingsProduct": "mezcla de nueces y almendras"
+    },
+    {
+      "id": 28,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut rellena de piña",
+      "priceProduct": 14800,
+      "unitsProduct": 1,
+      "ToppingsProduct": "glaseado tropical"
+    },
+    {
+      "id": 29,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut de matcha",
+      "priceProduct": 17000,
+      "unitsProduct": 1,
+      "ToppingsProduct": "polvo de té verde"
+    },
+    {
+      "id": 30,
+      "type" : "strawberriesAndCream",
+      "nameProduct": "Donut de frambuesa",
+      "priceProduct": 14000,
+      "unitsProduct": 1,
+      "ToppingsProduct": "glaseado rosado"
+    }
+  ]
+  

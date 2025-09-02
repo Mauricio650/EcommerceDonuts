@@ -1,0 +1,36 @@
+.card::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 30%;
+    background-color: #ffff;
+    /* opacity: 0.3; */
+    clip-path: polygon(50% 14%, 100% 0, 49% 0, 0 0);
+    bottom: -119px;
+}
+
+
+
+.card-container-btn::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: color-mix(in oklab, #FCAAC8 30%, transparent);
+    /* background-color: black; */
+    /* opacity: 0.3; */
+    clip-path: polygon(50% 14%, 100% 0, 49% 0, 0 0);
+    bottom: -60px;
+}
+
+
+.card-container-btn::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #ffff;
+    /* opacity: 0.3; */
+    clip-path: polygon(50% 14%, 100% 0, 49% 0, 0 0);
+    bottom: 1px;
+}

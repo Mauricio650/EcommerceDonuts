@@ -1,0 +1,33 @@
+import { useContext } from 'react'
+import './css/card.css'
+import { AddIcon, MinusIcon, PlusIcon } from './icons/icons'
+import { ContextCart } from '../context/Cart'
+
+export function CardProduct ({ id, nameProduct, priceProduct, unitsProduct, ToppingsProduct, imgProduct }) {
+  const { cart, addQuantity, minusQuantity, addToCart } = useContext(ContextCart)
+
+  const indexProduct = [...cart].findIndex((p) => p.id === id)
+  return (
+    <article data-id={id} className='card relative w-[200px] h-[400px] bg-[#FFFFFF] flex flex-col justify-between items-center rounded shadow-2xl shadow-black/30 p-2'>
+      <div className='w-full overflow-hidden h-[100px]  flex justify-center items-center'>
+        <img src='/img/product.webp' className='w-[200px] filter drop-shadow-md drop-shadow-black/30' alt={`image of ${nameProduct}`} />
+      </div>
+
+      <div className='space-grotesk text-center'>
+        <h1 className='text-xl'>{nameProduct}</h1>
+        <span className='text-md text-[#FD70A7]'>{ToppingsProduct}</span>
+        <span className='text-md text-gray-400 block'>{unitsProduct} un</span>
+      </div>
+      <h2 className='text-2xl text-[#FD70A7] space-grotesk font-bold'>{priceProduct} $</h2>
+      <aside className='card-container-btn flex justify-evenly p-1 items-end bg-[#FCAAC8]/30 w-[90%] h-[60px] relative rounded'>
+        {indexProduct >= 0 && <button className='cursor-pointer hover:scale-110' onClick={() => minusQuantity(id)}><MinusIcon /></button>}
+
+        {indexProduct >= 0 ? <span className='text-2xl'>{[...cart][indexProduct].quantity}</span> : <button onClick={() => addToCart({ id, nameProduct, priceProduct, quantity: 1, imgProduct })} className='cursor-pointer hover:scale-110'><PlusIcon /></button>}
+
+        {indexProduct >= 0 && <button className='cursor-pointer hover:scale-110' onClick={() => addQuantity(id)}><AddIcon /></button>}
+
+      </aside>
+    </article>
+  )
+}
+
