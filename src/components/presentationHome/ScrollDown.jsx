@@ -1,4 +1,4 @@
-import { SwipeDown } from './icons/icons'
+import { SwipeDown } from '../icons/icons'
 
 export function ScrollDown () {
   return (

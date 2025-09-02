@@ -1,8 +1,8 @@
-import { SloganAndTitle } from '../components/ContainerSlogan'
-import { Header } from '../components/Header'
+import { SloganAndTitle } from '../components/presentationHome/ContainerSlogan'
+import { Header } from '../components/presentationHome/Header'
 import { Donut, DonutHalf } from '../components/icons/icons'
-import { ScrollDown } from '../components/ScrollDown'
-import { SocialMediaContainer } from '../components/SocialMediaContainer'
+import { ScrollDown } from '../components/presentationHome/ScrollDown'
+import { SocialMediaContainer } from '../components/presentationHome/SocialMediaContainer'
 
 export function PresentationHome () {
   return (

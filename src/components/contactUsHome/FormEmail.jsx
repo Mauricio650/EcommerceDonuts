@@ -16,24 +16,24 @@ export function FormEmail () {
       <form action='https://formsubmit.co/mauricioibanez650@gmail.com' method='POST' className='w-full flex flex-col py-3 justify-start items-start gap-3 '>
         <div className='w-full flex flex-col xl:flex-row justify-center items-center gap-3'>
           <div className='flex flex-col w-full gap-2'>
-            <label className='font-bold text-xs' htmlFor='222'>Nombre</label>
-            <input type='text' name='name' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='222' />
+            <label className='font-bold text-xs' htmlFor={nameID}>Nombre</label>
+            <input type='text' name='name' id={nameID} className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow'  />
           </div>
 
           <div className='flex flex-col w-full gap-2'>
-            <label className='font-bold text-xs' htmlFor='221'>Número de celular</label>
-            <input type='number' name='phoneNumber' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='221' />
+            <label className='font-bold text-xs' htmlFor={phoneID}>Número de celular</label>
+            <input type='number' name='phoneNumber' id={phoneID} className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow'  />
           </div>
 
         </div>
 
         <div className='flex flex-col w-full gap-2'>
-          <label className='font-bold text-xs' htmlFor='224'>Correo</label>
-          <input type='email' name='email' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' />
+          <label className='font-bold text-xs' htmlFor={emailID}>Correo</label>
+          <input type='email' name='email' id={emailID} className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' />
         </div>
         <input type='hidden' name='_subject' value='New message from homerDonuts 🚀' />
-        <label className='font-bold text-xs' htmlFor='226'>Tu mensaje</label>
-        <textarea className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] w-full rounded shadow' name='message' id='22' />
+        <label className='font-bold text-xs' htmlFor={messageID}>Tu mensaje</label>
+        <textarea id={messageID} className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] w-full rounded shadow' name='message'/>
         <button className='bg-[#FC70A6] rounded-2xl p-1 px-3 shadow text-white'>Enviar Mensaje</button>
 
       </form>

@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter } from './icons/icons'
+import { Facebook, Instagram, Twitter } from '../icons/icons'
 
 export function SocialMediaContainer () {
   return (

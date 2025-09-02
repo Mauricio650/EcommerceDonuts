@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import { BagShop } from './icons/icons'
-import { ContextCart } from '../context/Cart'
+import { BagShop } from '../icons/icons'
+import { ContextCart } from '../../context/Cart'
 
 export function BtnCart ({ color, size }) {
   const { handleShowCart, cart } = useContext(ContextCart)

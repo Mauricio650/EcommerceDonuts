@@ -1,12 +1,11 @@
 import { useContext } from 'react'
-import { ContextCart } from '../context/Cart'
+import { ContextCart } from '../../context/Cart'
 import { NavLink, useLocation } from 'react-router-dom'
 
 export function TotalPrice () {
   const { cart } = useContext(ContextCart)
   const location = useLocation()
 
-  console.log(location.pathname)
   const totalPrice = cart.reduce((acc, cv) => {
     acc.total += (cv.priceProduct * cv.quantity)
     return acc

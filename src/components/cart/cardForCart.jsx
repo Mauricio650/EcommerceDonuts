@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import { MinusIcon2, PlusIcon2 } from './icons/icons'
-import { ContextCart } from '../context/Cart'
+import { MinusIcon2, PlusIcon2 } from '../icons/icons'
+import { ContextCart } from '../../context/Cart'
 
 export function CardForCart ({ imgProduct, nameProduct, priceProduct, id, quantity }) {
   const { addQuantity, minusQuantity } = useContext(ContextCart)

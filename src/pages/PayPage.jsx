@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { ContextCart } from '../context/Cart'
-import { TotalPrice } from '../components/TotalPrice'
-import { CardForCart } from '../components/cardForCart'
+import { TotalPrice } from '../components/cart/TotalPrice'
+import { CardForCart } from '../components/cart/cardForCart'
 import { TrashEmpty } from '../components/icons/icons'
 
 

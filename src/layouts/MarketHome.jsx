@@ -1,10 +1,10 @@
-import { CardProduct } from '../components/CardProduct'
 import { SpinnerLoading } from '../components/SpinnerLoading'
 import '../components/css/marketHome.css'
 import { useGetProduct } from '../hooks/useGetProducts'
-import { Filters } from '../components/Filters'
+import { Filters } from '../components/marketHome/Filters'
 import { useContext } from 'react'
 import { ContextFilters } from '../context/Filters'
+import { CardProduct } from '../components/MarketHome/CardProduct'
 
 export function MarketHome () {
   const { products, loading, error } = useGetProduct()
@@ -17,6 +17,7 @@ export function MarketHome () {
       (filters.price === 0 || p.priceProduct <= filters.price)
     )
   })
+
 
   return (
     <section className='bg-[#FCAAC8] w-full h-full p-2 sm:p-5 ring-3 ring-white rounded-4xl shadow-2xl shadow-black/70'>

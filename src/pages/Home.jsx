@@ -1,8 +1,8 @@
 import { MarketHome } from '../layouts/MarketHome'
 import { PresentationHome } from '../layouts/PresentationHome'
 import { ContactUsHome } from '../layouts/ContactUsHome'
-import { BtnCart } from '../components/BtnCart'
-import { Cart } from '../components/Cart'
+import { BtnCart } from '../components/cart/BtnCart'
+import { Cart } from '../components/cart/Cart'
 
 export function HomePage () {
   return (

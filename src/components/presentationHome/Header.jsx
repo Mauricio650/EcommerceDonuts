@@ -1,8 +1,8 @@
-import { BagShop, MenuGrid } from './icons/icons'
-import './css/header.css'
+import { BagShop, MenuGrid } from '../icons/icons'
+import '../css/header.css'
 import { useContext, useState } from 'react'
-import { ContextCart } from '../context/Cart'
-import { HeaderMobil } from './HeaderMobil'
+import { ContextCart } from '../../context/Cart'
+import { HeaderMobil } from '../HeaderMobil'
 
 export function Header () {
   const { handleShowCart, cart } = useContext(ContextCart)

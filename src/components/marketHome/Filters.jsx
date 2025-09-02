@@ -1,16 +1,14 @@
 import { useContext, useState } from 'react'
-import { ContextFilters } from '../context/Filters'
+import { ContextFilters } from '../../context/Filters'
 
 export function Filters () {
-  const { changeFilter, filters } = useContext(ContextFilters)
+  const { changeFilter} = useContext(ContextFilters)
   const [price, setPrice] = useState(0)
 
   const handleChangePrice = (e) => {
     setPrice(e.target.value)
     changeFilter({ price: parseInt(e.target.value) })
   }
-
-  console.log(filters)
   return (
     <section className='w-full flex justify-center items-center'>
       <div className='w-[90%] ring-2 shadow-2xl shadow-black/30 ring-white space-grotesk flex flex-col lg:flex-row justify-center items-center mt-1 md:mt-5  lg:p-8 lg:gap-5 bg-[#FD70A7] rounded-4xl '>

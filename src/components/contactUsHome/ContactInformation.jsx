@@ -1,4 +1,4 @@
-import { EmailIcon, PhoneIcon, AddressIcon } from './icons/icons'
+import { EmailIcon, PhoneIcon, AddressIcon } from '../icons/icons'
 
 export function ContactInformation () {
   return (

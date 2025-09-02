@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import { CloseIcon, TrashEmpty } from './icons/icons'
-import { ContextCart } from '../context/Cart'
+import { CloseIcon, TrashEmpty } from '../icons/icons'
+import { ContextCart } from '../../context/Cart'
 import { CardForCart } from './cardForCart'
 import { TotalPrice } from './TotalPrice'
 

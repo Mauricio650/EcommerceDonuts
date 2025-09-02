@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import './css/card.css'
-import { AddIcon, MinusIcon, PlusIcon } from './icons/icons'
-import { ContextCart } from '../context/Cart'
+import '../css/card.css'
+import { AddIcon, MinusIcon, PlusIcon } from '../icons/icons'
+import { ContextCart } from '../../context/Cart'
 
 export function CardProduct ({ id, nameProduct, priceProduct, unitsProduct, ToppingsProduct, imgProduct }) {
   const { cart, addQuantity, minusQuantity, addToCart } = useContext(ContextCart)
@@ -12,7 +12,7 @@ export function CardProduct ({ id, nameProduct, priceProduct, unitsProduct, Topp
       <div className='w-full overflow-hidden h-[100px]  flex justify-center items-center'>
         <img src='/img/product.webp' className='w-[200px] filter drop-shadow-md drop-shadow-black/30' alt={`image of ${nameProduct}`} />
       </div>
-
+      
       <div className='space-grotesk text-center'>
         <h1 className='text-xl'>{nameProduct}</h1>
         <span className='text-md text-[#FD70A7]'>{ToppingsProduct}</span>
