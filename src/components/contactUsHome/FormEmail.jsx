@@ -1,4 +1,4 @@
-import { useId } from "react"
+import { useId } from 'react'
 
 export function FormEmail () {
   const nameID = useId()
@@ -6,9 +6,9 @@ export function FormEmail () {
   const emailID = useId()
   const messageID = useId()
   return (
-    <div className='space-grotesk w-1/2 flex flex-col justify-center p-2 bg-[#FFFFFF] rounded shadow'>
+    <div className='space-grotesk w-1/2 flex flex-col justify-center p-2 bg-[#FFFFFF] rounded shadow-lg shadow-black/30'>
       <div className='w-full py-3'>
-        <h2 className='text-xl'>Envia un email</h2>
+        <h2 className='text-xl text-shadow-xs text-shadow-black'>Envia un email</h2>
       </div>
       <div className='w-full flex'>
         <div className='w-[98%] h-[1px] bg-[#FEE5EE]' />
@@ -17,12 +17,12 @@ export function FormEmail () {
         <div className='w-full flex flex-col xl:flex-row justify-center items-center gap-3'>
           <div className='flex flex-col w-full gap-2'>
             <label className='font-bold text-xs' htmlFor={nameID}>Nombre</label>
-            <input type='text' name='name' id={nameID} className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow'  />
+            <input type='text' name='name' id={nameID} className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' />
           </div>
 
           <div className='flex flex-col w-full gap-2'>
             <label className='font-bold text-xs' htmlFor={phoneID}>Número de celular</label>
-            <input type='number' name='phoneNumber' id={phoneID} className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow'  />
+            <input type='number' name='phoneNumber' id={phoneID} className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' />
           </div>
 
         </div>
@@ -33,8 +33,8 @@ export function FormEmail () {
         </div>
         <input type='hidden' name='_subject' value='New message from homerDonuts 🚀' />
         <label className='font-bold text-xs' htmlFor={messageID}>Tu mensaje</label>
-        <textarea id={messageID} className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] w-full rounded shadow' name='message'/>
-        <button className='bg-[#FC70A6] rounded-2xl p-1 px-3 shadow text-white'>Enviar Mensaje</button>
+        <textarea id={messageID} className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] w-full rounded shadow' name='message' />
+        <button className='bg-[#FC70A6] cursor-pointer hover:bg-[#aa0b48]  text-shadow-xs text-shadow-black rounded-2xl p-1 px-3 shadow text-white'>Enviar Mensaje</button>
 
       </form>
     </div>

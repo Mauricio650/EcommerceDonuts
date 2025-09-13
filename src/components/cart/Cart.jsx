@@ -11,6 +11,7 @@ export function Cart () {
     <section className={`
             z-3 h-screen flex flex-col items-center overflow-hidden
             fixed right-0 top-0 bg-[#FEE5EE] 
+            shadow-lg shadow-black/70
             transition-all duration-1000 ease-in-out 
             ${showCart ? 'w-[250px] sm:w-[350px] xl:w-[500px] gap-5 py-8 sm:p-5 sm:py-8' : 'w-0'}
           `}

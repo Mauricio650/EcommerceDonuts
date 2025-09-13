@@ -10,7 +10,7 @@ export function Header () {
   return (
     <>
       <HeaderMobil set={setShowHeaderMobil} show={showHeaderMobil} />
-      <header className='header-page xl:w-full flex justify-end  items-center sm:p-5 p-1'>
+      <header className='header-page xl:w-full flex justify-end text-shadow-xs text-shadow-black items-center sm:p-5 p-1'>
         <nav className='nav-header w-full  lg:block'>
           <ul className='space-grotesk text-white font-bold lg:text-xl sm:text-md text-xs flex gap-4 sm:gap-0 sm:justify-evenly items-center'>
             <a className='hover:text-[#EA73A0]' href=''><li>Inicio</li></a>

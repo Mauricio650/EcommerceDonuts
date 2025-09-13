@@ -4,7 +4,6 @@ import { TotalPrice } from '../components/cart/TotalPrice'
 import { CardForCart } from '../components/cart/cardForCart'
 import { TrashEmpty } from '../components/icons/icons'
 
-
 export function PayPage () {
   const { cart } = useContext(ContextCart)
   console.log(cart)
@@ -23,12 +22,12 @@ export function PayPage () {
                   </p>
                   <h1 className='chewy-regular text-purple-800 text-xl  text-center'>QR Nequi 3052665478</h1>
                 </header>
-                <div className='w-full flex justify-center items-center'>
-                  <img className='w-50 rounded-sm filter drop-shadow-sm' src='img/qr.webp' alt='Qr de cuenta nequi de la empresa homer donuts' />
+                <div className='w-full flex justify-center items-center '>
+                  <img className='w-50 rounded-sm filter drop-shadow-lg drop-shadow-black/30' src='img/qr.webp' alt='Qr de cuenta nequi de la empresa homer donuts' />
                 </div>
               </article>
 
-              <section className='w-full bg-white shadow-2xs p-5 rounded-2xl flex flex-col-reverse sm:flex-row justify-between items-center gap-1 sm:gap-2 '>
+              <section className='w-full shadow-lg shadow-black/30 bg-white p-5 rounded-2xl flex flex-col-reverse sm:flex-row justify-between items-center gap-1 sm:gap-2 '>
                 <div className='space-grotesk  p-1 sm:p-2 h-full flex flex-col justify-center bg-[#FFFFFF]'>
                   <div className='w-full py-1 sm:py-3'>
                     <h2 className='text-md sm:text-xl'>Envianos tus datos y # de comprobante o referencia</h2>
@@ -69,7 +68,7 @@ export function PayPage () {
                     </div>
 
                     <input type='hidden' name='_subject' value='Nuevo pedido -- homerDonuts 🚀' />
-                    <button className='bg-[#FC70A6] rounded-2xl p-1 px-3 shadow text-white'>Enviar Mensaje</button>
+                    <button className='bg-[#FC70A6] hover:bg-[#aa0b48] cursor-pointer rounded-2xl p-1 px-3 shadow-md text-white'>Enviar Mensaje</button>
 
                   </form>
                 </div>

@@ -2,9 +2,9 @@ import { EmailIcon, PhoneIcon, AddressIcon } from '../icons/icons'
 
 export function ContactInformation () {
   return (
-    <div className='space-grotesk flex flex-col justify-center p-2 bg-[#FFFFFF] rounded shadow'>
+    <div className='space-grotesk flex flex-col justify-center p-2 bg-[#FFFFFF] rounded shadow-lg shadow-black/30'>
       <div className='w-full py-3'>
-        <h2 className='text-sm sm:text-xl'>Información de contacto</h2>
+        <h2 className='text-sm sm:text-xl text-shadow-xs text-shadow-black'>Información de contacto</h2>
       </div>
       <div className='w-full flex'>
         <div className='w-[98%] h-[1px] bg-[#FEE5EE]' />

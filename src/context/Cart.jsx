@@ -6,12 +6,11 @@ export function ContextCartProvider ({ children }) {
   const [cart, setCart] = useState([])
   const [showCart, setShowCart] = useState(false)
 
-  const handleShowCart = (e) => {
-    console.log(cart)
+  const handleShowCart = () => {
     setShowCart(true)
   }
 
-  const handleCloseCart = (e) => {
+  const handleCloseCart = () => {
     setShowCart(false)
   }
 

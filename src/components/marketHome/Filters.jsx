@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import { ContextFilters } from '../../context/Filters'
 
 export function Filters () {
-  const { changeFilter} = useContext(ContextFilters)
+  const { changeFilter } = useContext(ContextFilters)
   const [price, setPrice] = useState(0)
 
   const handleChangePrice = (e) => {
@@ -10,8 +10,8 @@ export function Filters () {
     changeFilter({ price: parseInt(e.target.value) })
   }
   return (
-    <section className='w-full flex justify-center items-center'>
-      <div className='w-[90%] ring-2 shadow-2xl shadow-black/30 ring-white space-grotesk flex flex-col lg:flex-row justify-center items-center mt-1 md:mt-5  lg:p-8 lg:gap-5 bg-[#FD70A7] rounded-4xl '>
+    <section className='w-full flex justify-center items-center bg-transparent text-shadow-xs text-shadow-black '>
+      <div className='w-[90%] ring-2 shadow-lg shadow-black/30 ring-white space-grotesk flex flex-col lg:flex-row justify-center items-center mt-1 md:mt-5  lg:p-8 lg:gap-5 bg-[#FD70A7] rounded-4xl '>
         <label className='dancing-script text-white text-xl md:text-2xl' htmlFor='1452'>Productos</label>
         <select onChange={(e) => changeFilter({ products: e.target.value })} className='bg-white rounded cursor-pointer  text-[#FD70A7]' name='Productos' id='1452'>
           <option value='all'>All</option>

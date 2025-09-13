@@ -2,7 +2,7 @@ import { CloseIcon } from './icons/icons'
 
 export function HeaderMobil ({ show, set }) {
   return (
-    <header className={`backdrop-blur-md bg-[#EA73A0]/30 rounded-2xl  absolute z-2 overflow-hidden ${show ? 'flex w-full h-[150px]' : 'w-0 h-0'} transition-all duration-500 ease-in flex-col justify-center items-center`}>
+    <header className={`backdrop-blur-md bg-[#EA73A0]/30 rounded-2xl text-shadow-xs text-shadow-black  absolute z-2 overflow-hidden ${show ? 'flex w-full h-[150px]' : 'w-0 h-0'} transition-all duration-500 ease-in flex-col justify-center items-center`}>
       <nav className='w-full'>
         <ul className='space-grotesk text-white font-bold  text-xs flex flex-col gap-2 justify-center items-center'>
           <a className='hover:text-[#EA73A0]' href=''><li>Inicio</li></a>
