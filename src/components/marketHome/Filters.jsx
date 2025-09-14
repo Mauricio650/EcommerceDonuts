@@ -1,8 +1,8 @@
-import { useContext, useState } from 'react'
-import { ContextFilters } from '../../context/Filters'
+import { useState } from 'react'
+import { useFilters } from '../../hooks/useFilters'
 
 export function Filters () {
-  const { changeFilter } = useContext(ContextFilters)
+  const { changeFilter } = useFilters()
   const [price, setPrice] = useState(0)
 
   const handleChangePrice = (e) => {

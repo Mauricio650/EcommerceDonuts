@@ -1,11 +1,10 @@
-import { useContext } from 'react'
 import { CloseIcon, TrashEmpty } from '../icons/icons'
-import { ContextCart } from '../../context/Cart'
 import { CardForCart } from './cardForCart'
 import { TotalPrice } from './TotalPrice'
+import { useCart } from '../../hooks/useCart'
 
 export function Cart () {
-  const { showCart, handleCloseCart, cart } = useContext(ContextCart)
+  const { showCart, handleCloseCart, cart } = useCart()
 
   return (
     <section className={`

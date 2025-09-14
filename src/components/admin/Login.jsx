@@ -54,13 +54,13 @@ export function LoginForm () {
                            rtl:peer-focus:left-auto'
           >Contraseña
           </label>
-          
+
         </div>
-       
+
       </div>
-        <aside>
-           <button className='bg-[#FC70A6] cursor-pointer hover:bg-[#aa0b48]  text-shadow-xs text-shadow-black rounded-xl p-1 px-3 shadow-lg shadow-black/30 text-white'>Entrar</button>
-        </aside>
+      <aside>
+        <button className='bg-[#FC70A6] cursor-pointer hover:bg-[#aa0b48]  text-shadow-xs text-shadow-black rounded-xl p-1 px-3 shadow-lg shadow-black/30 text-white'>Entrar</button>
+      </aside>
     </form>
   )
 }
