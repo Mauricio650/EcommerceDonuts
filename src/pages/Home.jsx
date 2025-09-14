@@ -3,6 +3,7 @@ import { PresentationHome } from '../layouts/PresentationHome'
 import { ContactUsHome } from '../layouts/ContactUsHome'
 import { BtnCart } from '../components/cart/BtnCart'
 import { Cart } from '../components/cart/Cart'
+import { Donut, DonutHalf } from '../components/icons/icons'
 
 export function HomePage () {
   return (
@@ -15,7 +16,6 @@ export function HomePage () {
       </section>
 
       <main className='w-full h-full'>
-
         <section id='menu' className='w-full  p-2 sm:p-10'>
           <MarketHome />
         </section>

@@ -8,8 +8,8 @@ export function PresentationHome () {
   return (
     <section className=' bg-[#FCAAC8] w-full h-full ring-3 p-2 sm:p-5 ring-white rounded-4xl shadow-2xl shadow-black/70'>
       <section className='relative overflow-hidden w-full h-full bg-[#FECBDE] rounded-4xl shadow-md shadow-black/20'>
-        <DonutHalf />
-        <Donut />
+      <Donut></Donut>
+      <DonutHalf></DonutHalf>
         <Header />
         <SloganAndTitle />
         <SocialMediaContainer />

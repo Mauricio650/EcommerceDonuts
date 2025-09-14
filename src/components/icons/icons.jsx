@@ -92,14 +92,14 @@ export function SwipeDown () {
 export function Donut () {
   return (
 
-    <img src='img/donut.webp' alt='image of a donut' className='absolute md:w-[300px] xl:w-[400px] w-[220px] 2xl:w-[600px] right-0 bottom-20 sm:right-0 sm:bottom-0 rounded-tl-4xl filter drop-shadow-xl drop-shadow-black/40' />
+    <img src='/img/donut.webp' alt='image of a donut' className='absolute max-[400px]:w-[250px] md:w-[400px] lg:w-[310px] xl:w-[400px] w-[300px] 2xl:w-[600px] right-0 bottom-20 sm:right-0 sm:bottom-0 rounded-tl-4xl filter drop-shadow-xl drop-shadow-black/40' />
   )
 }
 
 export function DonutHalf () {
   return (
 
-    <img src='img/donutHalf.webp' alt='image of a half donut' className='absolute left-0 top-0 rounded-tl-4xl w-[50px] xl:w-[120px] filter drop-shadow-md drop-shadow-black/50' />
+    <img src='/img/donutHalf.webp' alt='image of a half donut' className='absolute left-0 top-0 rounded-tl-4xl w-[50px] xl:w-[120px] filter drop-shadow-md drop-shadow-black/50' />
   )
 }
 

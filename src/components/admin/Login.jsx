@@ -1,11 +1,36 @@
 import { useState, useId } from 'react'
+import { useAuth } from '../../hooks/useAuth'
+import { validatePartialSchemaUser } from '../../schemas/userSchema'
 
 export function LoginForm () {
   const usernameID = useId()
   const passwordID = useId()
   const [show, setShow] = useState(null)
+  const { login } = useAuth()
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const data = new FormData(e.target)
+    
+    const formData = Object.fromEntries(data.entries())
+ 
+    const result = validatePartialSchemaUser(data)
+    if (!result.success) {
+    const errors = {}
+    result.error.issues.forEach(e => {
+      errors.path = e.path
+      errors.message = e.message
+    })
+   console.log(errors.message, errors.path)
+   return
+  } 
+ login({ formData })
+    
+  }
+
   return (
-    <form className='flex flex-col shadow-lg shadow-black/70 font-mono
+    <form
+      onSubmit={handleSubmit} className='flex flex-col shadow-lg shadow-black/70 font-mono
              rounded ring-2 justify-center items-center gap-8
              ring-white bg-[#FECBDE] w-[340px] h-[450px]'
     >
@@ -15,11 +40,13 @@ export function LoginForm () {
       <div>
         <div className='relative'>
           <input
+          name='username'
             type='text' id={usernameID}
             class='block rounded px-2.5 pb-2.5 pt-5 w-full shadow
                           text-sm text-gray-900 bg-gray-50
                            border-0 border-b-2 border-[#FD70A7] focus:outline-none
                            focus:ring-0 focus:border-b-[#FFD54F] peer' placeholder=' '
+          required
           />
           <label
             for={usernameID} class='absolute text-sm
@@ -38,11 +65,13 @@ export function LoginForm () {
           <img onClick={() => setShow(false)} src='img/ojo_c.webp' className={`${show ? '' : 'hidden'} absolute cursor-pointer right-1 top-4 w-[18px]`} alt='' />
 
           <input
+          name='password'
             type={show ? 'text' : 'password'} id={passwordID}
             class='block rounded px-2.5 pb-2.5 pt-5 w-full shadow
                           text-sm text-gray-900 bg-gray-50
                            border-0 border-b-2 border-[#FD70A7] focus:outline-none
                            focus:ring-0 focus:border-b-[#FFD54F] peer' placeholder=' '
+                           required
           />
           <label
             for={passwordID} class='absolute text-sm
