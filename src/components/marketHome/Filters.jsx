@@ -15,7 +15,7 @@ export function Filters () {
         <label className='dancing-script text-white text-xl md:text-2xl' htmlFor='1452'>Productos</label>
         <select onChange={(e) => changeFilter({ products: e.target.value })} className='bg-white rounded cursor-pointer  text-[#FD70A7]' name='Productos' id='1452'>
           <option value='all'>All</option>
-          <option value='donuts'>Donuts</option>
+          <option value='donut'>Donuts</option>
           <option value='strawberriesAndCream'>Fresas con crema</option>
         </select>
         <label className='dancing-script text-white text-2xl' htmlFor='321'>Precio</label>

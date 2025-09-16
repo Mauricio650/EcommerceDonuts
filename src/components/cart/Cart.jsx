@@ -16,7 +16,7 @@ export function Cart () {
           `}
     >
       <div className='w-full max-h-[600px] overflow-y-auto p-1 sm:p-5 grid grid-cols-1 gap-4 bg-[#cc87a2] rounded shadow'>
-        {cart.length > 0 ? cart.map(p => <CardForCart {...p} />) : <div className='w-full flex justify-center items-center text-white'><TrashEmpty /></div>}
+        {cart.length > 0 ? cart.map(p => <CardForCart key={p.id} {...p} />) : <div className='w-full flex justify-center items-center text-white'><TrashEmpty /></div>}
       </div>
       <TotalPrice />
       <button onClick={handleCloseCart} className='w-[30px] cursor-pointer h-[30px] flex justify-center items-center  absolute top-0 left-0 z-10'><CloseIcon /></button>

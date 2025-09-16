@@ -11,14 +11,14 @@ export function AppRoutes () {
     <Routes>
       <Route path='/' element={<Navigate to='/home' replace />} />
       <Route path='/home' element={<HomePage />} />
-      <Route 
-      path='/login' element={
-        <ProviderAuthContext>
-           <Login />
-        </ProviderAuthContext>
+      <Route
+        path='/login' element={
+          <ProviderAuthContext>
+            <Login />
+          </ProviderAuthContext>
     }
-       />
-       
+      />
+
       <Route
         path='/adminPage' element={
 
@@ -28,7 +28,10 @@ export function AppRoutes () {
             </ProtectedRoute>
           </ProviderAuthContext>
 }
-      />
+      >
+        <Route index element={<h1>Products</h1>} />
+        <Route path='users' element={<h1>Users</h1>} />
+      </Route>
       <Route path='/payProducts' element={<PayPage />} />
     </Routes>
   )

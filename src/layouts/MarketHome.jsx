@@ -2,19 +2,18 @@ import { SpinnerLoading } from '../components/SpinnerLoading'
 import '../components/css/marketHome.css'
 import { useGetProduct } from '../hooks/useGetProducts'
 import { Filters } from '../components/marketHome/Filters'
-import { useContext } from 'react'
-import { ContextFilters } from '../context/Filters'
 import { CardProduct } from '../components/MarketHome/CardProduct'
+import { useFilters } from '../hooks/useFilters'
 
 export function MarketHome () {
   const { products, loading, error } = useGetProduct()
-  const { filters } = useContext(ContextFilters)
+  const { filters } = useFilters()
 
   const filteredProducts = [...products].filter((p) => {
     return (
       (filters.products === 'all' && filters.price === 0) ||
-      (filters.products === p.type || filters.products === 'all') &&
-      (filters.price === 0 || p.priceProduct <= filters.price)
+        (filters.products === p.type || filters.products === 'all') &&
+        (filters.price === 0 || p.price <= filters.price)
     )
   })
 

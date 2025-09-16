@@ -33,9 +33,9 @@ export function ContextCartProvider ({ children }) {
     setCart(newCart)
   }
 
-  const addToCart = ({ id, nameProduct, priceProduct, quantity, imgProduct }) => {
+  const addToCart = ({ id, name, price, quantity, url_img }) => {
     const newCart = [...cart]
-    newCart.push({ id, nameProduct, priceProduct, quantity, imgProduct })
+    newCart.push({ id, name, price, quantity, url_img })
     setCart(newCart)
   }
 

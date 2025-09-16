@@ -7,7 +7,7 @@ export function TotalPrice () {
   const location = useLocation()
 
   const totalPrice = cart.reduce((acc, cv) => {
-    acc.total += (cv.priceProduct * cv.quantity)
+    acc.total += (cv.price * cv.quantity)
     return acc
   }, { total: 0 })
   return (
