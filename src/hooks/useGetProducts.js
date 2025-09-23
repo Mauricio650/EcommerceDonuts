@@ -13,11 +13,10 @@ export function useGetProduct () {
     const fetchData = async () => {
       try {
         setLoading(true)
-        const response = await fetch(`${API_URL}products`,{
-          credentials:'include'
+        const response = await fetch(`${API_URL}products`, {
+          credentials: 'include'
         })
         const json = await response.json()
-        console.log(json)
         setProducts(json.products)
       } catch (err) {
         setError(err.message)

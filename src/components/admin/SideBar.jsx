@@ -7,7 +7,7 @@ export function SideBar ({ showSideBar }) {
   const { logOut } = useAuth()
 
   return (
-    <section className={`bg-white max-[720px]:absolute transition-all 
+    <section className={`bg-white max-[1281px]:absolute transition-all 
           ease-in duration-200 overflow-hidden z-5 min-h-screen
            ${showSideBar ? 'w-[300px] max-[500px]:w-[220px]  py-7 px-3' : 'w-[0px] min-h-screen'}
            shadow-xl/20`}
@@ -42,7 +42,7 @@ export function SideBar ({ showSideBar }) {
         </div>
 
         <div
-          onClick={ async () => await logOut()} className={`py-3 hover:text-[#FC70A6] cursor-pointer rounded transition-all duration-150 ease-in
+          onClick={async () => await logOut()} className={`py-3 hover:text-[#FC70A6] cursor-pointer rounded transition-all duration-150 ease-in
             'bg-white' }
                px-4`}
         >

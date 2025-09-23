@@ -56,7 +56,7 @@ export function ProviderAuthContext ({ children }) {
         navigate('/adminPage')
       } else if (response.status === 422) {
         alert('Invalid credentials')
-      }else if (response.status === 400) {
+      } else if (response.status === 400) {
         alert('User or Password is wrong')
       }
     } catch (error) {

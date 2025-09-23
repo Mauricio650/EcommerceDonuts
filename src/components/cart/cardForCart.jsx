@@ -10,7 +10,7 @@ export function CardForCart ({ url_img, name, price, id, quantity }) {
         <img className='w-[100px]' src={url_img} alt={`image of ${name}`} />
       </div>
       <div className='flex flex-col justify-center items-center gap-1'>
-        <h1 className='text-center text-shadow-xs text-shadow-black'>{name}</h1>
+        <h1 className='text-center text-[#FD70A7] text-shadow-xs text-shadow-black'>{name}</h1>
         <span className='text-gray-500 font-bold text-shadow-xs text-shadow-black'>{Number(price).toLocaleString('es-CO')}</span>
       </div>
       <div className='h-full w-[50px] sm:w-[100px] flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4 bg-[#FEE5EE]'>

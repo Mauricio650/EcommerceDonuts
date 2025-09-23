@@ -5,6 +5,7 @@ import { PayPage } from './pages/PayPage'
 import { Login } from './pages/Login'
 import { ProviderAuthContext } from './context/auth'
 import { ProtectedRoute } from './components/auth/ProtectedRoute'
+import { Products } from './layouts/admin/Products'
 
 export function AppRoutes () {
   return (
@@ -29,7 +30,7 @@ export function AppRoutes () {
           </ProviderAuthContext>
 }
       >
-        <Route index element={<h1>Products</h1>} />
+        <Route index element={<Products />} />
         <Route path='users' element={<h1>Users</h1>} />
       </Route>
       <Route path='/payProducts' element={<PayPage />} />

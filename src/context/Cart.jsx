@@ -1,10 +1,17 @@
-import { useState, createContext } from 'react'
+import { useEffect, useState, createContext } from 'react'
 
 export const ContextCart = createContext()
 
 export function ContextCartProvider ({ children }) {
   const [cart, setCart] = useState([])
   const [showCart, setShowCart] = useState(false)
+
+  useEffect(() => {
+    const cartLocalStorage = localStorage.getItem('products')
+
+    const products = cartLocalStorage ? JSON.parse(cartLocalStorage) : []
+    setCart(products)
+  }, [])
 
   const handleShowCart = () => {
     setShowCart(true)
@@ -18,6 +25,7 @@ export function ContextCartProvider ({ children }) {
     const newCart = [...cart]
     const index = newCart.findIndex((p) => p.id === id)
     newCart[index].quantity += 1
+    localStorage.setItem('products', JSON.stringify(newCart))
     setCart(newCart)
   }
 
@@ -26,6 +34,7 @@ export function ContextCartProvider ({ children }) {
     const index = newCart.findIndex((p) => p.id === id)
     if (newCart[index].quantity === 1) {
       const filterCart = newCart.filter(p => p.id !== newCart[index].id)
+      localStorage.setItem('products', JSON.stringify(filterCart))
       setCart(filterCart)
       return
     }
@@ -36,11 +45,13 @@ export function ContextCartProvider ({ children }) {
   const addToCart = ({ id, name, price, quantity, url_img }) => {
     const newCart = [...cart]
     newCart.push({ id, name, price, quantity, url_img })
+    localStorage.setItem('products', JSON.stringify(newCart))
     setCart(newCart)
   }
 
   const deleteToCart = ({ id }) => {
     const filterCart = [...cart].filter(p => p.id !== id)
+    localStorage.setItem('products', JSON.stringify(filterCart))
     setCart(filterCart)
   }
 
