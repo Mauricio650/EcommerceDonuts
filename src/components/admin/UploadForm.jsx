@@ -13,6 +13,7 @@ export function UploadForm ({ showModalUpload, handleModalUpload }) {
     })
 
     const json = await response.json()
+    console.log(json)
   }
 
   return (
@@ -23,31 +24,31 @@ export function UploadForm ({ showModalUpload, handleModalUpload }) {
 
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor=''>Nombre</label>
-          <input name='name' className='bg-white  text-black p-1 rounded min-w-[100px]' type='text' />
+          <input required name='name' className='bg-white  text-black p-1 rounded min-w-[100px]' type='text' />
         </div>
 
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor=''>Precio</label>
-          <input name='price' className='bg-white text-black p-1 rounded min-w-[100px]' type='number' />
+          <input required name='price' className='bg-white text-black p-1 rounded min-w-[100px]' type='number' />
         </div>
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor=''>Unidades</label>
-          <input name='units' className='bg-white text-black p-1 rounded min-w-[100px]' type='number' />
+          <input required name='units' className='bg-white text-black p-1 rounded min-w-[100px]' type='number' />
         </div>
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor=''>Toppings</label>
-          <textarea name='toppings' className='bg-white text-black p-1 rounded min-w-[200px]' type='text' />
+          <textarea required name='toppings' className='bg-white text-black p-1 rounded min-w-[200px]' type='text' />
         </div>
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor=''>Tipo</label>
-          <select name='type' className='bg-white cursor-pointer text-black p-1 rounded min-w-[100px]'>
+          <select required name='type' className='bg-white cursor-pointer text-black p-1 rounded min-w-[100px]'>
             <option value='donut'>Donut</option>
             <option value='strawberriesAndCream'>Fresa con crema</option>
           </select>
         </div>
         <div className='space-grotesk text-white  text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor=''>imagen</label>
-          <input name='image' className='bg-white cursor-pointer max-w-[200px] text-black p-1 rounded' type='file' accept='image/png, image/jpeg, image/webp' />
+          <input required name='image' className='bg-white cursor-pointer max-w-[200px] text-black p-1 rounded' type='file' accept='image/png, image/jpeg, image/webp' />
         </div>
 
         <aside>

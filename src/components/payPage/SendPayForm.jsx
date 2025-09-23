@@ -11,12 +11,12 @@ export function PayForm () {
         <div className='w-full flex flex-col xl:flex-row justify-center items-center gap-3'>
           <div className='flex flex-col w-full gap-2'>
             <label className='font-bold text-xs' htmlFor='222'>Nombre</label>
-            <input type='text' name='name' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='222' />
+            <input required type='text' name='name' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='222' />
           </div>
 
           <div className='flex flex-col w-full gap-2'>
             <label className='font-bold text-xs' htmlFor='221'>Número de celular</label>
-            <input type='number' name='phoneNumber' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='221' />
+            <input required type='number' name='phoneNumber' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='221' />
           </div>
 
         </div>
@@ -24,19 +24,19 @@ export function PayForm () {
         <div className='w-full flex flex-col xl:flex-row justify-center items-center gap-3'>
           <div className='flex flex-col w-full gap-2'>
             <label className='font-bold text-xs' htmlFor='222'>Correo</label>
-            <input type='text' name='email' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='222' />
+            <input required type='text' name='email' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='222' />
           </div>
 
           <div className='flex flex-col w-full gap-2'>
             <label className='font-bold text-xs' htmlFor='221'>Referencia o # de pago</label>
-            <input type='text' name='referencia' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='221' />
+            <input required type='text' name='referencia' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='221' />
           </div>
 
         </div>
 
         <div className='flex flex-col w-full gap-2'>
           <label className='font-bold text-xs' htmlFor='221'>Dirección del domicilio</label>
-          <input type='text' name='address' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='221' />
+          <input required type='text' name='address' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='221' />
         </div>
 
         <input type='hidden' name='_subject' value='Nuevo pedido -- homerDonuts 🚀' />

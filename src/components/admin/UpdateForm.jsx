@@ -24,20 +24,20 @@ export function UpdateForm ({ showModalUpdate, handleModalUpdate }) {
 
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor=''>Nombre</label>
-          <input defaultValue={showModalUpdate.item?.name} name='name' className='bg-white  text-black p-1 rounded min-w-[100px]' type='text' />
+          <input required defaultValue={showModalUpdate.item?.name} name='name' className='bg-white  text-black p-1 rounded min-w-[100px]' type='text' />
         </div>
 
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor=''>Precio</label>
-          <input defaultValue={showModalUpdate.item?.price} name='price' className='bg-white text-black p-1 rounded min-w-[100px]' type='number' />
+          <input required defaultValue={showModalUpdate.item?.price} name='price' className='bg-white text-black p-1 rounded min-w-[100px]' type='number' />
         </div>
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor=''>Unidades</label>
-          <input defaultValue={showModalUpdate.item?.units} name='units' className='bg-white text-black p-1 rounded min-w-[100px]' type='number' />
+          <input required defaultValue={showModalUpdate.item?.units} name='units' className='bg-white text-black p-1 rounded min-w-[100px]' type='number' />
         </div>
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor=''>Toppings</label>
-          <textarea defaultValue={showModalUpdate.item?.toppings} name='toppings' className='bg-white text-black p-1 rounded min-w-[200px]' type='text' />
+          <textarea required defaultValue={showModalUpdate.item?.toppings} name='toppings' className='bg-white text-black p-1 rounded min-w-[200px]' type='text' />
         </div>
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor=''>Tipo</label>

@@ -17,7 +17,7 @@ export function ContactInformation () {
           </div>
           <div className='flex flex-col justify-center'>
             <p className='font-bold'>Celular</p>
-            <span className='text-xs text-gray-700'>3001234567</span>
+            <span className='text-xs text-gray-700'>3144246130</span>
           </div>
         </div>
 
@@ -27,7 +27,8 @@ export function ContactInformation () {
           </div>
           <div className='flex flex-col justify-center'>
             <p className='font-bold'>Dirección</p>
-            <span className='text-xs text-gray-700'>Cl.51 cr45</span>
+            <span className='text-xs text-gray-700'>📍 Parque Divino Niño S/D</span>
+            <span className='text-xs text-gray-700'>📍 Parque hipódromo</span>
           </div>
         </div>
 
@@ -39,7 +40,7 @@ export function ContactInformation () {
         </div>
         <div className='flex flex-col justify-center'>
           <p className='font-bold'>Correo</p>
-          <span className='text-xs text-gray-700'>test@test.com</span>
+          <span className='text-xs  text-gray-700'>homersdonuts2023@gmail.com</span>
         </div>
       </div>
 
