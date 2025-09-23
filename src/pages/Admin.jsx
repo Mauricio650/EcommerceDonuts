@@ -6,7 +6,7 @@ import { Income } from '../layouts/admin/IncomeContainer'
 import { Outlet } from 'react-router-dom'
 
 export function AdminPage () {
-  const [showSideBar, setShowSideBar] = useState(true)
+  const [showSideBar, setShowSideBar] = useState(false)
 
   return (
     <section className='w-full min-h-screen'>

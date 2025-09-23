@@ -40,7 +40,11 @@ export function PayForm () {
         </div>
 
         <input type='hidden' name='_subject' value='Nuevo pedido -- homerDonuts 🚀' />
-        <button className='bg-[#FC70A6] shadow-xl hover:bg-[#aa0b48] cursor-pointer rounded-2xl p-1 px-3 text-white'>Enviar Mensaje</button>
+        
+         <input type="hidden" name="_captcha" value="false"></input>
+         <input type="hidden" name="_next" value="http://localhost:5173/"/>
+
+        <button onClick={() => alert('pedido realizado')} className='bg-[#FC70A6] shadow-xl hover:bg-[#aa0b48] cursor-pointer rounded-2xl p-1 px-3 text-white'>Enviar Mensaje</button>
 
       </form>
     </div>

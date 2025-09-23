@@ -9,7 +9,7 @@ export function CardProduct ({ id, name, price, units, toppings, url_img }) {
   const indexProduct = [...cart].findIndex((p) => p.id === id)
   return (
     <article data-id={id} className='card relative w-[200px] h-[400px] bg-[#FFFFFF] flex flex-col justify-between items-center rounded shadow-2xl shadow-black/40 p-2'>
-      <div className='w-full overflow-hidden h-[100px]  flex justify-center items-center'>
+      <div className='w-full overflow-hidden h-[150px]  flex justify-center items-center'>
         <img src={url_img} className='w-[200px] filter drop-shadow-md drop-shadow-black/30' alt={`image of ${name}`} />
       </div>
 

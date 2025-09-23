@@ -1,9 +1,9 @@
 import { PlusIcon } from '../../components/icons/icons'
 import { useGetProduct } from '../../hooks/useGetProducts'
 import { SpinnerLoading } from '../../components/SpinnerLoading'
-import { CardItems } from './CardItems'
-import { UpdateForm } from './UpdateForm'
-import { UploadForm } from './UploadForm'
+import { CardItems } from '../../components/admin/CardItems'
+import { UpdateForm } from '../../components/admin/UpdateForm'
+import { UploadForm } from '../../components/admin/UploadForm'
 import { useHandleModalUpdateForm } from '../../hooks/useHandleModalUpdateForm'
 import { useHandleModalUploadForm } from '../../hooks/useHandleModalUploadForm'
 
