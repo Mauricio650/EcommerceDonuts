@@ -11,6 +11,9 @@ export function HomePage () {
       <BtnCart color='#FFFF' size={30} />
       <Cart />
 
+      <div className='max-w-[1680px] m-auto'>
+
+      
       <section className='w-full h-screen p-2 sm:p-10 flex justify-center items-center '>
         <PresentationHome />
       </section>
@@ -25,6 +28,7 @@ export function HomePage () {
         </section>
 
       </main>
+      </div>
     </>
   )
 }

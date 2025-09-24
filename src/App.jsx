@@ -2,13 +2,19 @@ import './App.css'
 import { AppRoutes } from './AppRoutes'
 import { ContextCartProvider } from './context/Cart'
 import { ContextFiltersProvider } from './context/Filters'
-import { Toaster} from 'sonner'
-
+import { Toaster } from 'sonner'
 
 function App () {
   return (
     <>
-    <Toaster richColors closeButton position="top-center" />
+      <Toaster
+        closeButton position='top-center'
+        toastOptions={{
+          classNames: {
+            description: '!text-white'
+          }
+        }}
+      />
       <ContextCartProvider>
         <ContextFiltersProvider>
           <AppRoutes />

@@ -2,21 +2,21 @@ import { useContext } from 'react'
 import '../css/card.css'
 import { AddIcon, MinusIcon, PlusIcon } from '../icons/icons'
 import { ContextCart } from '../../context/Cart'
-import {toast } from 'sonner'
-
-
+import { toast } from 'sonner'
 
 export function CardProduct ({ id, name, price, units, toppings, url_img }) {
   const { cart, addQuantity, minusQuantity, addToCart } = useContext(ContextCart)
 
   const indexProduct = [...cart].findIndex((p) => p.id === id)
 
-  const handleAddProducts = (e) => {
-    toast.success(`${name} añadida en el carrito`,{
-      backGround: 'red'
+  const handleAddProducts = () => {
+    toast.success(`${name} añadida en el carrito`, {
+      style: {
+        background: '#FD70A7',
+        color: 'white'
+      }
     })
     addToCart({ id, name, price, quantity: 1, url_img })
-    return
   }
 
   return (

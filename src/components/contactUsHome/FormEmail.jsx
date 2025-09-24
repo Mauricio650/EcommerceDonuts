@@ -1,4 +1,5 @@
 import { useId } from 'react'
+import { toast } from 'sonner'
 
 export function FormEmail () {
   const nameID = useId()
@@ -13,7 +14,14 @@ export function FormEmail () {
       <div className='w-full flex'>
         <div className='w-[98%] h-[1px] bg-[#FEE5EE]' />
       </div>
-      <form action='https://formsubmit.co/mauricioibanez650@gmail.com' method='POST' className='w-full flex flex-col py-3 justify-start items-start gap-3 '>
+      <form
+        onSubmit={() => toast.success('Correo enviado, muchas gracias', {
+          style: {
+            background: '#FD70A7',
+            color: 'white'
+          }
+        })} action='https://formsubmit.co/mauricioibanez650@gmail.com' method='POST' className='w-full flex flex-col py-3 justify-start items-start gap-3 '
+      >
         <div className='w-full flex flex-col xl:flex-row justify-center items-center gap-3'>
           <div className='flex flex-col w-full gap-2'>
             <label className='font-bold text-xs' htmlFor={nameID}>Nombre</label>
@@ -36,6 +44,8 @@ export function FormEmail () {
         <textarea required id={messageID} className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] w-full rounded shadow' name='message' />
         <button className='bg-[#FC70A6] cursor-pointer hover:bg-[#aa0b48]  text-shadow-xs text-shadow-black rounded-2xl p-1 px-3 shadow text-white'>Enviar Mensaje</button>
 
+        <input type='hidden' name='_captcha' value='false' />
+        <input type='hidden' name='_next' value='http://localhost:5173/' />
       </form>
     </div>
   )

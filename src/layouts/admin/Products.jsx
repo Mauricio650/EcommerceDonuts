@@ -9,9 +9,8 @@ import { useHandleModalUploadForm } from '../../hooks/useHandleModalUploadForm'
 
 export function Products () {
   const { products, loading, error } = useGetProduct()
-  const {showModalUpdate, handleModalUpdate} = useHandleModalUpdateForm()
-  const { showModalUpload, handleModalUpload} = useHandleModalUploadForm()
-
+  const { showModalUpdate, handleModalUpdate } = useHandleModalUpdateForm()
+  const { showModalUpload, handleModalUpload } = useHandleModalUploadForm()
 
   return (
     <>

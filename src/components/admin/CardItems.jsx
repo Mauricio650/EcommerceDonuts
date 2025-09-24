@@ -2,7 +2,7 @@ import { PencilIcon, TrashEmpty, TrashIcon } from '../icons/icons'
 import { useDeleteProduct } from '../../hooks/useDeleteProducts'
 
 export function CardItems ({ handleModal, id, name, price, units, toppings, url_img }) {
-  const {handleClickDelete} = useDeleteProduct()
+  const { handleClickDelete } = useDeleteProduct()
   return (
     <article className='card relative w-[200px] h-[400px] bg-[#FFFFFF] flex flex-col justify-between items-center rounded shadow-2xl shadow-black/40 p-2'>
       <div className='w-full overflow-hidden h-[150px]  flex justify-center items-center'>
