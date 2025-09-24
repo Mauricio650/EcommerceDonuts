@@ -2,11 +2,23 @@ import { useContext } from 'react'
 import '../css/card.css'
 import { AddIcon, MinusIcon, PlusIcon } from '../icons/icons'
 import { ContextCart } from '../../context/Cart'
+import {toast } from 'sonner'
+
+
 
 export function CardProduct ({ id, name, price, units, toppings, url_img }) {
   const { cart, addQuantity, minusQuantity, addToCart } = useContext(ContextCart)
 
   const indexProduct = [...cart].findIndex((p) => p.id === id)
+
+  const handleAddProducts = (e) => {
+    toast.success(`${name} añadida en el carrito`,{
+      backGround: 'red'
+    })
+    addToCart({ id, name, price, quantity: 1, url_img })
+    return
+  }
+
   return (
     <article data-id={id} className='card relative w-[200px] h-[400px] bg-[#FFFFFF] flex flex-col justify-between items-center rounded shadow-2xl shadow-black/40 p-2'>
       <div className='w-full overflow-hidden h-[150px]  flex justify-center items-center'>
@@ -22,7 +34,7 @@ export function CardProduct ({ id, name, price, units, toppings, url_img }) {
       <aside className='card-container-btn flex justify-evenly p-1 items-end bg-[#FCAAC8]/30 w-[90%] h-[60px] relative rounded'>
         {indexProduct >= 0 && <button className='cursor-pointer hover:scale-110' onClick={() => minusQuantity(id)}><MinusIcon /></button>}
 
-        {indexProduct >= 0 ? <span className='text-2xl'>{[...cart][indexProduct].quantity}</span> : <button onClick={() => addToCart({ id, name, price, quantity: 1, url_img })} className='cursor-pointer hover:scale-110'><PlusIcon /></button>}
+        {indexProduct >= 0 ? <span className='text-2xl'>{[...cart][indexProduct].quantity}</span> : <button onClick={handleAddProducts} className='cursor-pointer hover:scale-110'><PlusIcon /></button>}
 
         {indexProduct >= 0 && <button className='cursor-pointer hover:scale-110' onClick={() => addQuantity(id)}><AddIcon /></button>}
 
