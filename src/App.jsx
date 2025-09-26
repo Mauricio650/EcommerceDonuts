@@ -3,6 +3,7 @@ import { AppRoutes } from './AppRoutes'
 import { ContextCartProvider } from './context/Cart'
 import { ContextFiltersProvider } from './context/Filters'
 import { Toaster } from 'sonner'
+import { ContextProductsProvider } from './context/Products'
 
 function App () {
   return (
@@ -17,7 +18,9 @@ function App () {
       />
       <ContextCartProvider>
         <ContextFiltersProvider>
-          <AppRoutes />
+          <ContextProductsProvider>
+            <AppRoutes />
+          </ContextProductsProvider>
         </ContextFiltersProvider>
       </ContextCartProvider>
     </>

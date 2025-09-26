@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { toast } from 'sonner'
+import { useGetProduct } from './useGetProducts'
 
 export function useHandleModalUploadForm () {
   const [showModalUpload, setShowModalUpload] = useState(false)
+  const {refreshListProducts } = useGetProduct()
 
   const handleModalUpload = () => {
     setShowModalUpload(p => (!p))
@@ -24,6 +26,7 @@ export function useHandleModalUploadForm () {
       /* usamos async en un then para procesar mejor la respuesta del servidor usando await y no tener que usar mas then */
         .then(async (response) => {
           if (response.ok) {
+            refreshListProducts()
             toast.success('nuevo producto agregado', {
               style: {
                 background: '#FD70A7',

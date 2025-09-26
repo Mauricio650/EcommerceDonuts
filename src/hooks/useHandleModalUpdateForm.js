@@ -4,7 +4,7 @@ import { toast } from 'sonner'
 
 export function useHandleModalUpdateForm () {
   const [showModalUpdate, setShowModalUpdate] = useState({ show: false, item: null })
-  const { products } = useGetProduct()
+  const { products, refreshListProducts } = useGetProduct()
 
   const handleModalUpdate = (e) => {
     if (showModalUpdate.show === false) {
@@ -31,6 +31,7 @@ export function useHandleModalUpdateForm () {
       /* usamos async en un then para procesar mejor la respuesta del servidor usando await y no tener que usar mas then */
         .then(async (response) => {
           if (response.ok) {
+            refreshListProducts()
             toast.success('Producto actualizado', {
               style: {
                 background: '#FD70A7',

@@ -1,6 +1,7 @@
 import { useEffect, useState, createContext } from 'react'
 
 import { useLocation, useNavigate } from 'react-router-dom'
+import { toast } from 'sonner'
 
 export const authContext = createContext()
 const API_URL = import.meta.env.VITE_API_URL_LOCAL
@@ -55,13 +56,30 @@ export function ProviderAuthContext ({ children }) {
         setUser(json)
         navigate('/adminPage')
       } else if (response.status === 422) {
-        alert('Invalid credentials')
+         const json = await response.json()
+            toast.error(`Error: ${json.message.path[0]}`, {
+              style: {
+                background: '#F14445',
+                color: 'white'
+              },
+              description: json.message.message
+            })
       } else if (response.status === 400) {
-        alert('User or Password is wrong')
+        toast.error(`Error: User or Password is wrong`, {
+              style: {
+                background: '#F14445',
+                color: 'white'
+              },
+            })
       }
     } catch (error) {
       console.error('Internal server error:', error)
-      alert('Internal server error')
+      toast.error(`Internal server error`, {
+              style: {
+                background: '#F14445',
+                color: 'white'
+              },
+            })
     } finally {
       setLoading(false)
     }
@@ -74,8 +92,13 @@ export function ProviderAuthContext ({ children }) {
     })
 
     if (response.ok) {
-      navigate('/')
-      alert('Log out successfully')
+      navigate('/login')
+       toast.success('Log out successfully', {
+              style: {
+                background: '#FD70A7',
+                color: 'white'
+              }
+          })
     }
   }
 
