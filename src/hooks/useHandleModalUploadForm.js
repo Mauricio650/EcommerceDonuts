@@ -4,12 +4,11 @@ import { useGetProduct } from './useGetProducts'
 
 export function useHandleModalUploadForm () {
   const [showModalUpload, setShowModalUpload] = useState(false)
-  const {refreshListProducts } = useGetProduct()
+  const { refreshListProducts } = useGetProduct()
 
   const handleModalUpload = () => {
     setShowModalUpload(p => (!p))
   }
-
 
   const handleSubmitForm = async (e) => {
     e.preventDefault()

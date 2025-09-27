@@ -56,30 +56,30 @@ export function ProviderAuthContext ({ children }) {
         setUser(json)
         navigate('/adminPage')
       } else if (response.status === 422) {
-         const json = await response.json()
-            toast.error(`Error: ${json.message.path[0]}`, {
-              style: {
-                background: '#F14445',
-                color: 'white'
-              },
-              description: json.message.message
-            })
+        const json = await response.json()
+        toast.error(`Error: ${json.message.path[0]}`, {
+          style: {
+            background: '#F14445',
+            color: 'white'
+          },
+          description: json.message.message
+        })
       } else if (response.status === 400) {
-        toast.error(`Error: User or Password is wrong`, {
-              style: {
-                background: '#F14445',
-                color: 'white'
-              },
-            })
+        toast.error('Error: User or Password is wrong', {
+          style: {
+            background: '#F14445',
+            color: 'white'
+          }
+        })
       }
     } catch (error) {
       console.error('Internal server error:', error)
-      toast.error(`Internal server error`, {
-              style: {
-                background: '#F14445',
-                color: 'white'
-              },
-            })
+      toast.error('Internal server error', {
+        style: {
+          background: '#F14445',
+          color: 'white'
+        }
+      })
     } finally {
       setLoading(false)
     }
@@ -93,12 +93,12 @@ export function ProviderAuthContext ({ children }) {
 
     if (response.ok) {
       navigate('/login')
-       toast.success('Log out successfully', {
-              style: {
-                background: '#FD70A7',
-                color: 'white'
-              }
-          })
+      toast.success('Log out successfully', {
+        style: {
+          background: '#FD70A7',
+          color: 'white'
+        }
+      })
     }
   }
 

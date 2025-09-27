@@ -45,7 +45,6 @@ export function FormEmail () {
         <button className='bg-[#FC70A6] cursor-pointer hover:bg-[#aa0b48]  text-shadow-xs text-shadow-black rounded-2xl p-1 px-3 shadow text-white'>Enviar Mensaje</button>
 
         <input type='hidden' name='_captcha' value='false' />
-        <input type='hidden' name='_next' value='http://localhost:5173/' />
       </form>
     </div>
   )

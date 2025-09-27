@@ -5,7 +5,7 @@ import { Schedule } from '../components/contactUsHome/Schedule'
 
 export function ContactUsHome () {
   return (
-     <section className='bg-[#FCAAC8] w-full h-full p-2 sm:p-5 ring-3 ring-white rounded-4xl shadow-2xl shadow-black/70'>
+    <section className='bg-[#FCAAC8] w-full h-full p-2 sm:p-5 ring-3 ring-white rounded-4xl shadow-2xl shadow-black/70'>
       <section className='relative w-full h-full bg-[#FECBDE] rounded-4xl p-5 shadow-md shadow-black/20'>
         <ContactUs />
         <section className='w-full flex flex-col sm:flex-row gap-5'>

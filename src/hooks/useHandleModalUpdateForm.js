@@ -15,7 +15,6 @@ export function useHandleModalUpdateForm () {
     setShowModalUpdate(p => ({ ...p, show: !p.show }))
   }
 
-
   const handleSubmitForm = async (e, showModalUpdate) => {
     e.preventDefault()
     const data = new FormData(e.target)

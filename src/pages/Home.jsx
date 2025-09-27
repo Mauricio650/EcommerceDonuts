@@ -13,21 +13,20 @@ export function HomePage () {
 
       <div className='max-w-[1680px] m-auto'>
 
-      
-      <section className='w-full h-screen p-2 sm:p-10 flex justify-center items-center '>
-        <PresentationHome />
-      </section>
-
-      <main className='w-full h-full'>
-        <section id='menu' className='w-full  p-2 sm:p-10'>
-          <MarketHome />
+        <section className='w-full h-screen p-2 sm:p-10 flex justify-center items-center '>
+          <PresentationHome />
         </section>
 
-        <section id='contactos' className='w-full p-2 sm:p-10'>
-          <ContactUsHome />
-        </section>
+        <main className='w-full h-full'>
+          <section id='menu' className='w-full  p-2 sm:p-10'>
+            <MarketHome />
+          </section>
 
-      </main>
+          <section id='contactos' className='w-full p-2 sm:p-10'>
+            <ContactUsHome />
+          </section>
+
+        </main>
       </div>
     </>
   )

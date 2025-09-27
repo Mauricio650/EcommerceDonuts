@@ -6,12 +6,13 @@ import { Login } from './pages/Login'
 import { ProviderAuthContext } from './context/auth'
 import { ProtectedRoute } from './components/auth/ProtectedRoute'
 import { Products } from './layouts/admin/Products'
+import { Users } from './layouts/admin/Users'
 
 export function AppRoutes () {
   return (
     <Routes>
       <Route path='/' element={<Navigate to='/home' replace />} />
-      <Route path='/home' element={ <HomePage />} />
+      <Route path='/home' element={<HomePage />} />
       <Route
         path='/login' element={
           <ProviderAuthContext>
@@ -31,7 +32,7 @@ export function AppRoutes () {
 }
       >
         <Route index element={<Products />} />
-        <Route path='users' element={<h1>Users</h1>} />
+        <Route path='users' element={<Users />} />
       </Route>
       <Route path='/payProducts' element={<PayPage />} />
     </Routes>

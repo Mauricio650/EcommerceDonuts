@@ -1,6 +1,7 @@
 import { useState, useId } from 'react'
 import { useAuth } from '../../hooks/useAuth'
 import { validatePartialSchemaUser } from '../../schemas/userSchema'
+import { toast } from 'sonner'
 
 export function LoginForm () {
   const usernameID = useId()
@@ -10,21 +11,25 @@ export function LoginForm () {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const data = new FormData(e.target)
 
-    const formData = Object.fromEntries(data.entries())
-
-    const result = validatePartialSchemaUser(data)
+    const formData = Object.fromEntries(new FormData(e.target).entries())
+    const result = validatePartialSchemaUser(formData)
     if (!result.success) {
       const errors = {}
       result.error.issues.forEach(e => {
         errors.path = e.path
         errors.message = e.message
       })
-      console.log(errors.message, errors.path)
+      toast.error(`Error: ${errors.path}`, {
+        style: {
+          background: '#F14445',
+          color: 'white'
+        },
+        description: errors.message
+      })
       return
     }
-    await login({ formData })
+    await login({ formData: result.data })
   }
 
   return (

@@ -3,24 +3,25 @@ import { CloseIcon } from '../icons/icons'
 import { useId, useRef } from 'react'
 
 export function UploadForm ({ showModalUpload, handleModalUpload }) {
-  const {handleSubmitForm} = useHandleModalUploadForm()
-   const imgUREF = useRef(null)
-   const NameUID = useId()
-   const PriceUID = useId()
-   const UnitsUID = useId()
-   const ToppingsUID = useId()
-   const  TypeUID= useId()
-   const ImgUID = useId()
-  
+  const { handleSubmitForm } = useHandleModalUploadForm()
+  const imgUREF = useRef(null)
+  const NameUID = useId()
+  const PriceUID = useId()
+  const UnitsUID = useId()
+  const ToppingsUID = useId()
+  const TypeUID = useId()
+  const ImgUID = useId()
 
   return (
     <section role='modal' className={`${showModalUpload === true ? 'flex' : 'hidden'} filter backdrop-blur-sm   absolute  top-0 z-1  w-full h-full justify-center items-center`}>
       <button onClick={handleModalUpload} className='w-[30px] cursor-pointer h-[30px] flex justify-center items-center  absolute top-0 left-0 z-10'><CloseIcon /></button>
 
-      <form onSubmit={async (e) => {
-        handleSubmitForm(e)
-        imgUREF.current.value = ''
-      } } className='bg-[#FD70A7] relative rounded-2xl gap-2 shadow-2xl flex flex-col justify-center items-center py-5 w-[500px]' encType='multipart/form-data'>
+      <form
+        onSubmit={async (e) => {
+          handleSubmitForm(e)
+          imgUREF.current.value = ''
+        }} className='bg-[#FD70A7] relative rounded-2xl gap-2 shadow-2xl flex flex-col justify-center items-center py-5 w-[500px]' encType='multipart/form-data'
+      >
 
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
           <label htmlFor={NameUID}>Nombre</label>
