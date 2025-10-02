@@ -16,7 +16,7 @@ export function ProviderAuthContext ({ children }) {
     const checkSession = async () => {
       setLoading(true) // opcional, por si quieres mostrar spinner mientras
       try {
-        const response = await fetch(`${API_URL}validateToken`, {
+        const response = await fetch(`${API_URL}user/validateToken`, {
           credentials: 'include'
         })
 
@@ -43,7 +43,7 @@ export function ProviderAuthContext ({ children }) {
 
   const login = async ({ formData }) => {
     try {
-      const response = await fetch(`${API_URL}login`, {
+      const response = await fetch(`${API_URL}user/login`, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -86,7 +86,7 @@ export function ProviderAuthContext ({ children }) {
   }
 
   const logOut = async () => {
-    const response = await fetch(`${API_URL}logOut`, {
+    const response = await fetch(`${API_URL}user/logOut`, {
       method: 'POST',
       credentials: 'include'
     })

@@ -1,40 +1,16 @@
 import { useState, useId } from 'react'
-import { useAuth } from '../../hooks/useAuth'
-import { validatePartialSchemaUser } from '../../schemas/userSchema'
-import { toast } from 'sonner'
+import { useRequestUsers } from '../../hooks/useRequestUser'
+
 
 export function LoginForm () {
   const usernameID = useId()
   const passwordID = useId()
   const [show, setShow] = useState(null)
-  const { login } = useAuth()
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-
-    const formData = Object.fromEntries(new FormData(e.target).entries())
-    const result = validatePartialSchemaUser(formData)
-    if (!result.success) {
-      const errors = {}
-      result.error.issues.forEach(e => {
-        errors.path = e.path
-        errors.message = e.message
-      })
-      toast.error(`Error: ${errors.path}`, {
-        style: {
-          background: '#F14445',
-          color: 'white'
-        },
-        description: errors.message
-      })
-      return
-    }
-    await login({ formData: result.data })
-  }
+  const {handleSubmitLogin} = useRequestUsers()
 
   return (
     <form
-      onSubmit={handleSubmit} className='flex flex-col shadow-lg shadow-black/70 font-mono
+      onSubmit={handleSubmitLogin} className='flex flex-col shadow-lg shadow-black/70 font-mono
              rounded ring-2 justify-center items-center gap-8
              ring-white bg-[#FECBDE] w-[340px] h-[450px]'
     >

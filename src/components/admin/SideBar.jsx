@@ -9,11 +9,11 @@ export function SideBar ({ showSideBar }) {
   return (
     <section className={`bg-white max-[1281px]:absolute transition-all 
           ease-in duration-200 overflow-hidden z-5 min-h-screen
-           ${showSideBar ? 'w-[300px] max-[500px]:w-[220px]  py-7 px-3' : 'w-[0px] min-h-screen'}
+           ${showSideBar ? 'w-[300px] max-[500px]:w-[220px] py-7 px-3' : 'w-[0px]'}
            shadow-xl/20`}
     >
 
-      <section className='space-grotesk text-md text-shadow-2xs text-shadow-black/30  flex flex-col gap-2'>
+      <section className='space-grotesk h-full  text-md text-shadow-2xs text-shadow-black/30  flex flex-col gap-2'>
         <div className={`py-3 rounded  transition-all duration-150 ease-in
              ${location.pathname === '/adminPage' ? 'bg-[#FD70A7]/20 pointer-events-none font-bold' : 'bg-white  hover:text-[#FC70A6]'}
                px-4`}
