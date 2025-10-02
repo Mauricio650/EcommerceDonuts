@@ -1,12 +1,11 @@
-import { createContext } from "react";
-import { useEffect, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 const API_URL = import.meta.env.VITE_API_URL_LOCAL
 
 export const ContextUser = createContext()
 
-export function ProviderUserContext ({children}) {
-    const [userList, setUserList] = useState([])
+export function ProviderUserContext ({ children }) {
+  const [userList, setUserList] = useState([])
   const [loading, setLoading] = useState(false)
   const [refreshList, setRefreshList] = useState(false)
 
@@ -32,13 +31,13 @@ export function ProviderUserContext ({children}) {
   }, [refreshList])
 
   const handleRefreshList = () => {
-    setRefreshList(p => (!p))
+    return setRefreshList(p => (!p))
   }
-    return (
-        <ContextUser.Provider
-        value={{ userList, loading, handleRefreshList }}
-        >
-            {children}
-        </ContextUser.Provider>
-    )
+  return (
+    <ContextUser.Provider
+      value={{ userList, loading, handleRefreshList }}
+    >
+      {children}
+    </ContextUser.Provider>
+  )
 }

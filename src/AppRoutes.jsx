@@ -17,7 +17,9 @@ export function AppRoutes () {
       <Route
         path='/login' element={
           <ProviderAuthContext>
-            <Login />
+            <ProviderUserContext>
+              <Login />
+            </ProviderUserContext>
           </ProviderAuthContext>
     }
       />
@@ -27,17 +29,21 @@ export function AppRoutes () {
 
           <ProviderAuthContext>
             <ProtectedRoute>
+
               <AdminPage />
+
             </ProtectedRoute>
           </ProviderAuthContext>
 }
       >
         <Route index element={<Products />} />
-        <Route path='users' element={
-          <ProviderUserContext>
-            <Users />
-          </ProviderUserContext>
-        } />
+        <Route
+          path='users' element={
+            <ProviderUserContext>
+              <Users />
+            </ProviderUserContext>
+        }
+        />
       </Route>
       <Route path='/payProducts' element={<PayPage />} />
     </Routes>
