@@ -76,14 +76,13 @@ export function useRequestUsers () {
       successToast({ text: 'Usuario creado' })
       handleRefreshList()
     } else if (response.status === 409) {
-        errorToast({ path: 'username', message: 'El usuario ya existe' })
-    }
-     else {
+      errorToast({ path: 'username', message: 'El usuario ya existe' })
+    } else {
       errorToast({ path: 'error en el servidor', message: 'error interno' })
     }
   }
 
-  const handleUpdatePassword = async (e,{id}) => {
+  const handleUpdatePassword = async (e, { id }) => {
     e.preventDefault()
     const formData = Object.fromEntries(new FormData(e.target))
     const result = validatePartialSchemaUser(formData)

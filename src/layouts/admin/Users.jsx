@@ -8,14 +8,14 @@ import { UpdatePasswordForm } from '../../components/admin/UpdatePasswordForm'
 export function Users () {
   const { userList } = useGetUsers()
   const [showModalRegister, setModalRegister] = useState(null)
-  const [showModalUPassword, setModalUPassword] = useState({show:false, id:null})
+  const [showModalUPassword, setModalUPassword] = useState({ show: false, id: null })
 
   const handleModalRegister = () => {
     setModalRegister(p => (!p))
   }
 
   const handleModalUPassword = (id) => {
-    setModalUPassword(p => ({...p, show: !p.show, id}))
+    setModalUPassword(p => ({ ...p, show: !p.show, id }))
   }
   return (
     <section className='h-full w-full relative overflow-auto'>
@@ -24,7 +24,7 @@ export function Users () {
           <PlusIcon />
         </div>
       </div>
-      <UpdatePasswordForm showModalUPassword={showModalUPassword} handleModalUPassword={handleModalUPassword}></UpdatePasswordForm>
+      <UpdatePasswordForm showModalUPassword={showModalUPassword} handleModalUPassword={handleModalUPassword} />
       <RegisterForm showModalRegister={showModalRegister} handleModalRegister={handleModalRegister} />
       <section className='w-full p-4 py-10  overflow-y-auto-auto grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 justify-items-center'>
         {userList.map(u => (

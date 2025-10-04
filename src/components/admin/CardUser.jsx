@@ -1,7 +1,7 @@
 import { useRequestUsers } from '../../hooks/useRequestUser'
 import { PencilIcon, TrashIcon } from '../icons/icons'
 
-export function CardUser ({ username,handleModalUPassword, role, id }) {
+export function CardUser ({ username, handleModalUPassword, role, id }) {
   const { handleDeleteUser } = useRequestUsers()
 
   return (
@@ -12,7 +12,7 @@ export function CardUser ({ username,handleModalUPassword, role, id }) {
       </div>
 
       <div data-id={id} className='flex justify-center gap-7 bg-[#FD70A7] shadow-2xs w-full h-full rounded items-center'>
-        <div onClick={ () => handleModalUPassword(id)} className='hover:scale-105 bg-white p-1 rounded-full cursor-pointer'>
+        <div onClick={() => handleModalUPassword(id)} className='hover:scale-105 bg-white p-1 rounded-full cursor-pointer'>
           <PencilIcon />
         </div>
         <div onClick={handleDeleteUser} data-id={id} className='hover:scale-105 bg-white p-1 rounded-full cursor-pointer'>

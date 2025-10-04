@@ -15,7 +15,7 @@ export function CardItems ({ handleModal, id, name, price, units, toppings, url_
         <span className='text-md text-shadow-xs text-shadow-black text-gray-400 block'>{units} un</span>
       </div>
       <h2 className='text-2xl text-shadow-xs text-shadow-black text-[#FD70A7] space-grotesk font-bold'>{Number(price).toLocaleString('es-CO')} $</h2>
-      <aside className='card-container-btn flex justify-evenly  p-1 items-end bg-[#FCAAC8]/30 w-[90%] h-[60px] relative rounded'>
+      <aside className='card-container-btn flex justify-evenly  p-1 items-end bg-[#FCAAC8]/30 w-[90%] min-h-[60px] relative rounded'>
         <div onClick={handleModal} data-id={id} className='hover:scale-105 bg-[#FD70A7] p-2 rounded-full cursor-pointer'>
           <PencilIcon />
         </div>

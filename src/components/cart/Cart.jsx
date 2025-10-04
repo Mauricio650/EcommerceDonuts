@@ -12,7 +12,7 @@ export function Cart () {
             fixed right-0 top-0 bg-[#FEE5EE] 
             shadow-lg shadow-black/70
             transition-all duration-1000 ease-in-out 
-            ${showCart ? 'w-[250px] sm:w-[350px] xl:w-[500px] gap-5 py-8 sm:p-5 sm:py-8' : 'w-0'}
+            ${showCart ? 'w-[250px] p-1 sm:w-[350px] xl:w-[500px] gap-5 py-8 sm:p-5 sm:py-8' : 'w-0'}
           `}
     >
       <div className='w-full max-h-[600px] overflow-y-auto p-1 sm:p-5 grid grid-cols-1 gap-4 bg-[#cc87a2] rounded shadow'>

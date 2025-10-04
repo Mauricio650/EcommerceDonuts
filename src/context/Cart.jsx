@@ -42,9 +42,9 @@ export function ContextCartProvider ({ children }) {
     setCart(newCart)
   }
 
-  const addToCart = ({ id, name, price, quantity, url_img }) => {
+  const addToCart = ({ id, name, price, type, quantity, url_img }) => {
     const newCart = [...cart]
-    newCart.push({ id, name, price, quantity, url_img })
+    newCart.push({ id, name, price, type, quantity, url_img })
     localStorage.setItem('products', JSON.stringify(newCart))
     setCart(newCart)
   }

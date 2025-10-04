@@ -15,7 +15,7 @@ export function RegisterForm ({ handleModalRegister, showModalRegister }) {
       >
 
         <div className='space-grotesk text-white text-shadow-black text-shadow-sm flex flex-col justify-center'>
-          <label htmlFor={usernameID}>Username</label>
+          <label htmlFor={usernameID}>Nombre de usuario</label>
           <input required id={usernameID} name='username' className='bg-white  text-black p-1 rounded min-w-[100px]' type='text' />
         </div>
 
