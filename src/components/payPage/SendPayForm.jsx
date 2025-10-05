@@ -10,7 +10,9 @@ export function PayForm () {
   const handleSubmitFormPage = async (e) => {
     e.preventDefault()
 
-    const dataDb = cart.map((p) => ([p.name, Number(p.price), p.type, p.quantity]))
+    const id = 1
+
+    const dataDb = cart.map((p) => ([p.name, Number(p.price), p.type, p.quantity, id]))
     console.log(dataDb)
 
     const response = await fetch(`${API_URL}sales`, {
@@ -24,7 +26,7 @@ export function PayForm () {
     if (response.ok) {
       successToast({ text: 'Compra realizada, Validaremos tu pago y nos pondremos en contacto contigo' })
     }
-    e.target.submit()
+    /* e.target.submit() */
   }
 
   return (
