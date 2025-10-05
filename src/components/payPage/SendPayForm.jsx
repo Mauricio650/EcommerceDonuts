@@ -1,20 +1,46 @@
-import { successToast } from '../../toast/toast'
+import { errorToast, successToast } from '../../toast/toast'
 import { useCart } from '../../hooks/useCart'
 
-export function PayForm () {
+
+export function useOrdersByClients(){
   const { cart } = useCart()
-
-  const dataEmail = cart.map((p) => `Producto: ${p.name} - Precio: ${p.price} - Cantidad: ${p.quantity} - Tipo: ${p.type} `).join()
-
   const API_URL = import.meta.env.VITE_API_URL_LOCAL
-  const handleSubmitFormPage = async (e) => {
+  const handleSubmitFormPay = async (e) => {
     e.preventDefault()
+    let clientID
 
-    const id = 1
+    const form = Object.fromEntries(new FormData(e.target))
+    const formData = {
+      name: form.name,
+      phoneNumber: form.phoneNumber,
+      email: form.email,
+      address: form.address,
+      payReference: form.payReference
+    }
 
-    const dataDb = cart.map((p) => ([p.name, Number(p.price), p.type, p.quantity, id]))
-    console.log(dataDb)
+    const responseClient = await fetch(`${API_URL}sales/clients`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
 
+    if (responseClient.status === 201) {
+      const json = await responseClient.json()
+      clientID = json.idClient
+    } else if (responseClient.status === 422) {
+      const json = await responseClient.json()
+      errorToast({path: json.message.path, message: json.message.message})
+      return
+    }
+
+    if(!clientID) {
+      errorToast({path: 'error interno', message: 'por favor intentelo mas tarde o comuníquese con nosotros'})
+      return
+    }
+
+    const dataDb = cart.map((p) => ([p.name, Number(p.price), p.type, p.quantity, clientID]))
     const response = await fetch(`${API_URL}sales`, {
       method: 'POST',
       headers: {
@@ -26,8 +52,21 @@ export function PayForm () {
     if (response.ok) {
       successToast({ text: 'Compra realizada, Validaremos tu pago y nos pondremos en contacto contigo' })
     }
-    /* e.target.submit() */
+    e.target.submit()
+    e.target.reset()
+   
   }
+
+  return {handleSubmitFormPay}
+}
+
+
+export function PayForm () {
+  const { cart } = useCart()
+  const {handleSubmitFormPay} = useOrdersByClients()
+  const dataEmail = cart.map((p) => `Producto: ${p.name} - Precio: ${p.price} - Cantidad: ${p.quantity} - Tipo: ${p.type} `).join()
+
+  
 
   return (
     <div className='space-grotesk w-full  p-1 sm:p-2 h-full shadow-xl rounded-b-2xl flex flex-col justify-center bg-[#FFFFFF]'>
@@ -37,14 +76,14 @@ export function PayForm () {
       <div className='w-full flex'>
         <div className='w-[98%] h-[1px] bg-[#FEE5EE]' />
       </div>
-      <form onSubmit={handleSubmitFormPage} action='https://formsubmit.co/mauricioibanez650@gmail.com' method='POST' className='w-full flex flex-col py-3 justify-start items-start gap-3 '>
+      <form onSubmit={handleSubmitFormPay} action='https://formsubmit.co/mauricioibanez650@gmail.com' method='POST' className='w-full flex flex-col py-3 justify-start items-start gap-3 '>
         <input type='hidden' name='_subject' value='Nuevo pedido -- homerDonuts 🚀' />
 
         <input type='hidden' name='Compra' value={dataEmail} />
 
         <input type='hidden' name='_captcha' value='false' />
 
-        <input type='hidden' name='_next' value='http://localhost:5173/home' />
+       {/*  <input type='hidden' name='_next' value='http://localhost:5173/home' /> */}
 
         <div className='w-full flex flex-col xl:flex-row justify-center items-center gap-3'>
           <div className='flex flex-col w-full gap-2'>
@@ -67,7 +106,7 @@ export function PayForm () {
 
           <div className='flex flex-col w-full gap-2'>
             <label className='font-bold text-xs' htmlFor='221'>Referencia o # de pago</label>
-            <input required type='text' name='referencia' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='221' />
+            <input required type='text' name='payReference' className='bg-[#FEE5EE] ring-[1.2px] ring-[#FD70A7] rounded shadow' id='221' />
           </div>
 
         </div>
