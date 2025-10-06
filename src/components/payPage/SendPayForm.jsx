@@ -1,72 +1,10 @@
-import { errorToast, successToast } from '../../toast/toast'
 import { useCart } from '../../hooks/useCart'
-
-
-export function useOrdersByClients(){
-  const { cart } = useCart()
-  const API_URL = import.meta.env.VITE_API_URL_LOCAL
-  const handleSubmitFormPay = async (e) => {
-    e.preventDefault()
-    let clientID
-
-    const form = Object.fromEntries(new FormData(e.target))
-    const formData = {
-      name: form.name,
-      phoneNumber: form.phoneNumber,
-      email: form.email,
-      address: form.address,
-      payReference: form.payReference
-    }
-
-    const responseClient = await fetch(`${API_URL}sales/clients`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-
-    if (responseClient.status === 201) {
-      const json = await responseClient.json()
-      clientID = json.idClient
-    } else if (responseClient.status === 422) {
-      const json = await responseClient.json()
-      errorToast({path: json.message.path, message: json.message.message})
-      return
-    }
-
-    if(!clientID) {
-      errorToast({path: 'error interno', message: 'por favor intentelo mas tarde o comuníquese con nosotros'})
-      return
-    }
-
-    const dataDb = cart.map((p) => ([p.name, Number(p.price), p.type, p.quantity, clientID]))
-    const response = await fetch(`${API_URL}sales`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ sale: dataDb })
-    })
-
-    if (response.ok) {
-      successToast({ text: 'Compra realizada, Validaremos tu pago y nos pondremos en contacto contigo' })
-    }
-    e.target.submit()
-    e.target.reset()
-   
-  }
-
-  return {handleSubmitFormPay}
-}
-
+import { useOrdersByClients } from '../../hooks/useOrdersByClients'
 
 export function PayForm () {
   const { cart } = useCart()
-  const {handleSubmitFormPay} = useOrdersByClients()
+  const { handleSubmitFormPay } = useOrdersByClients()
   const dataEmail = cart.map((p) => `Producto: ${p.name} - Precio: ${p.price} - Cantidad: ${p.quantity} - Tipo: ${p.type} `).join()
-
-  
 
   return (
     <div className='space-grotesk w-full  p-1 sm:p-2 h-full shadow-xl rounded-b-2xl flex flex-col justify-center bg-[#FFFFFF]'>
@@ -83,7 +21,7 @@ export function PayForm () {
 
         <input type='hidden' name='_captcha' value='false' />
 
-       {/*  <input type='hidden' name='_next' value='http://localhost:5173/home' /> */}
+        {/*  <input type='hidden' name='_next' value='http://localhost:5173/home' /> */}
 
         <div className='w-full flex flex-col xl:flex-row justify-center items-center gap-3'>
           <div className='flex flex-col w-full gap-2'>
