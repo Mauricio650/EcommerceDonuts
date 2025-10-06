@@ -8,6 +8,7 @@ import { ProtectedRoute } from './components/auth/ProtectedRoute'
 import { Products } from './layouts/admin/Products'
 import { Users } from './layouts/admin/Users'
 import { ProviderUserContext } from './context/Users'
+import { Orders } from './layouts/admin/Orders'
 
 export function AppRoutes () {
   return (
@@ -41,6 +42,14 @@ export function AppRoutes () {
           path='users' element={
             <ProviderUserContext>
               <Users />
+            </ProviderUserContext>
+        }
+        />
+
+         <Route
+          path='orders' element={
+            <ProviderUserContext>
+              <Orders />
             </ProviderUserContext>
         }
         />

@@ -18,7 +18,7 @@ export function AdminPage () {
 
         <section className='flex flex-col w-full p-5 gap-5'>
 
-          {location.pathname !== '/adminPage/users' ? <Income /> : ''}
+          {location.pathname === '/adminPage' ? <Income /> : ''}
 
           <section className='w-full h-full bg-white p-2 mx-auto rounded-xl shadow-xl/20'>
             <Outlet />

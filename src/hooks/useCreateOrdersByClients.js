@@ -1,7 +1,7 @@
 import { errorToast, successToast } from '../toast/toast'
 import { useCart } from './useCart'
 
-export function useOrdersByClients () {
+export function useCreateOrdersByClients () {
   const { cart } = useCart()
   const API_URL = import.meta.env.VITE_API_URL_LOCAL
   const handleSubmitFormPay = async (e) => {

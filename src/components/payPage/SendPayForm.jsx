@@ -1,9 +1,9 @@
 import { useCart } from '../../hooks/useCart'
-import { useOrdersByClients } from '../../hooks/useOrdersByClients'
+import { useCreateOrdersByClients } from '../../hooks/useCreateOrdersByClients'
 
 export function PayForm () {
   const { cart } = useCart()
-  const { handleSubmitFormPay } = useOrdersByClients()
+  const { handleSubmitFormPay } = useCreateOrdersByClients()
   const dataEmail = cart.map((p) => `Producto: ${p.name} - Precio: ${p.price} - Cantidad: ${p.quantity} - Tipo: ${p.type} `).join()
 
   return (

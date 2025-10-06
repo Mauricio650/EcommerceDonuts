@@ -1,6 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom'
-import { HomeIcon, LogOutIcon, UserIcon } from '../icons/icons'
+import { BagShop, HomeIcon, LogOutIcon, UserIcon } from '../icons/icons'
 import { useAuth } from '../../hooks/useAuth'
+import { size } from 'zod'
 
 export function SideBar ({ showSideBar }) {
   const location = useLocation()
@@ -22,7 +23,7 @@ export function SideBar ({ showSideBar }) {
           <NavLink
             to='/adminPage'
           >
-            <p className='flex gap-2 items-center'><HomeIcon /> Dashboard</p>
+            <p className='flex gap-2 items-center'><HomeIcon /> Panel principal</p>
           </NavLink>
 
         </div>
@@ -37,7 +38,21 @@ export function SideBar ({ showSideBar }) {
                 ? 'pointer-events-none cursor-default font-bold'
                 : ''}
           >
-            <p className='flex gap-2 items-center'><UserIcon /> Users</p>
+            <p className='flex gap-2 items-center'><UserIcon /> Usuarios</p>
+          </NavLink>
+        </div>
+        <div className={`py-3  rounded transition-all duration-150 ease-in
+             ${location.pathname === '/adminPage/orders' ? 'bg-[#FD70A7]/20' : 'bg-white hover:text-[#FC70A6]'}
+               px-4`}
+        >
+          <NavLink
+            to='/adminPage/orders'
+            className={({ isActive }) =>
+              isActive
+                ? 'pointer-events-none cursor-default font-bold'
+                : ''}
+          >
+            <p className='flex gap-2 items-center'><BagShop size={24} color={'black'}></BagShop> Pedidos</p>
           </NavLink>
         </div>
 
