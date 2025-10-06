@@ -52,7 +52,7 @@ export function SideBar ({ showSideBar }) {
                 ? 'pointer-events-none cursor-default font-bold'
                 : ''}
           >
-            <p className='flex gap-2 items-center'><BagShop size={24} color={'black'}></BagShop> Pedidos</p>
+            <p className='flex gap-2 items-center'><BagShop size={24} color='black' /> Pedidos</p>
           </NavLink>
         </div>
 
