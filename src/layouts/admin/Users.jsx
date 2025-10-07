@@ -26,7 +26,7 @@ export function Users () {
       </div>
       <UpdatePasswordForm showModalUPassword={showModalUPassword} handleModalUPassword={handleModalUPassword} />
       <RegisterForm showModalRegister={showModalRegister} handleModalRegister={handleModalRegister} />
-      <section className='w-full p-4 py-10  overflow-y-auto-auto grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 justify-items-center'>
+      <section className='w-full p-4 py-10  overflow-y-auto-auto grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4 justify-items-center'>
         {userList.map(u => (
           <CardUser key={u.id} handleModalUPassword={handleModalUPassword} id={u.id} username={u.username} role={u.role} />
         ))}

@@ -16,7 +16,7 @@ export function IncomeCard ({ incomeValue, title, color, pathImg }) {
     <article className='flex shadow-xl/20 flex-col justify-between lg:w-[400px] lg:h-[150px] bg-white rounded-xl'>
       <section className='flex flex-col sm:flex-row justify-between items-center p-5'>
         <div>
-          <p className={`text-3xl space-grotesk text-shadow-2xs ${colorsT[color]} text-shadow-black/30`}>$ {incomeValue}</p>
+          <p className={`text-3xl space-grotesk text-shadow-2xs ${colorsT[color]} text-shadow-black/30`}>$ {Number(incomeValue).toLocaleString('es-CO')}</p>
           <p className='dancing-script text-xl mt-2 text-shadow-2xs text-shadow-black/30'>{title}</p>
         </div>
         <div>
