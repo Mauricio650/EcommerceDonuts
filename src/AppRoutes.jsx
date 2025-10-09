@@ -9,6 +9,7 @@ import { Products } from './layouts/admin/Products'
 import { Users } from './layouts/admin/Users'
 import { ProviderUserContext } from './context/Users'
 import { Orders } from './layouts/admin/Orders'
+import { Clients } from './layouts/admin/Clients'
 
 export function AppRoutes () {
   return (
@@ -38,6 +39,7 @@ export function AppRoutes () {
 }
       >
         <Route index element={<Products />} />
+
         <Route
           path='users' element={
             <ProviderUserContext>
@@ -48,12 +50,21 @@ export function AppRoutes () {
 
         <Route
           path='orders' element={
-            <ProviderUserContext>
-              <Orders />
-            </ProviderUserContext>
+
+            <Orders />
+
+        }
+        />
+
+        <Route
+          path='clients' element={
+
+            <Clients />
+
         }
         />
       </Route>
+
       <Route path='/payProducts' element={<PayPage />} />
     </Routes>
   )
