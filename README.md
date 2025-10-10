@@ -4,13 +4,11 @@ This project was create for a donut business, the main idea is offer its product
 
 ![Status](https://img.shields.io/badge/finished-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Made with](https://img.shields.io/badge/Express-React-blue?style=flat)
-![Made with](https://img.shields.io/badge/Mysql-Cloudinary-blue?style=flat)
 
 
 ## 🧠 About
 
-Itsi an e-commerce designed to expand the business's popularity and improve processes such as customer orders, delivery, client management and income tracking.
+It's an e-commerce designed to expand the business's popularity and improve processes such as customer orders, delivery, client management and income tracking.
 
 
 
@@ -40,9 +38,20 @@ Itsi an e-commerce designed to expand the business's popularity and improve proc
    ```
 
 2. environment variables
+
+    2.1 Create a .env file
+
     ```bash
-    VITE_API_URL_LOCAL='Get this URL in https://github.com/Mauricio650/EcommerceDonutsBakend'
+    VITE_API_URL_LOCAL='Get this url in https://github.com/Mauricio650/EcommerceDonutsBakend'
     ```
+
+    2.2 use this variable in code like this
+
+    ```bash
+    import.meta.env.VITE_API_URL_LOCAL
+    ```
+
+**Important**
 
 >  🧩 Note: The backend of this project is available in a separate repository
 > [EcommerceDonuts Backend](https://github.com/Mauricio650/EcommerceDonutsBakend)
@@ -69,3 +78,4 @@ This project is licensed under MIT License
 ## 👤 Author
 
 **Mauricio ibañez bermudez**
+**GitHub:** https://github.com/Mauricio650
