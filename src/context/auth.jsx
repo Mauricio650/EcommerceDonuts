@@ -42,6 +42,7 @@ export function ProviderAuthContext ({ children }) {
   }, [])
 
   const login = async ({ formData }) => {
+    setLoading(true)
     try {
       const response = await fetch(`${API_URL}user/login`, {
         method: 'POST',

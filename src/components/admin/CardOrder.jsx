@@ -42,7 +42,7 @@ export function CardOrder ({ statusOrder, handleClickUpdateOrderStatus, handleCl
           <tfoot className='text-[#FD70A7]'>
             <tr>
               <th colspan='3' class='text-right p-3 md:max-w-[250px] break-words'>Valor de la compra</th>
-              <th class=' p-3 md:max-w-[250px] text-center break-words'>$ {totalPrice.current}</th>
+              <th class=' p-3 md:max-w-[250px] text-center break-words'>$ {totalPrice.current.toLocaleString('ES-CO')}</th>
             </tr>
           </tfoot>
         </table>
