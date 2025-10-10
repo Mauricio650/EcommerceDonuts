@@ -5,13 +5,14 @@ This project was create for a donut business, the main idea is offer its product
 ![Status](https://img.shields.io/badge/finished-green?style=for-the-badge)
 
 ## 📚 Table of Contents
-- [About](#About)
-- [Features](#Features)
-- [Installation and usage](#Installation-and-usage)
-- [Tech Stack](#Tech-stack)
-- [Contributing](#Contributing)
-- [License](#License)
-- [Author](#Author)
+- [About](#-about)
+- [Features](#-features)
+- [Installation and usage](#-installation-and-usage)
+- [Tech Stack](#-tech-stack)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Author](#-author)
+
 
 ## 🧠 About
 
