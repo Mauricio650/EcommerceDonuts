@@ -3,8 +3,15 @@
 This project was create for a donut business, the main idea is offer its products online.
 
 ![Status](https://img.shields.io/badge/finished-green?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-blue)
 
+## 📚 Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Installation and usage](#installation)
+- [Tech Stack](#tech-stack)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
 
 ## 🧠 About
 
@@ -24,7 +31,7 @@ It's an e-commerce designed to expand the business's popularity and improve proc
 - Orders management (Refresh the list each 10 seconds)
 
 
-## ⚙️ Installation
+## ⚙️ Installation and usage
 
 1. Clone the repository:
    ```bash
