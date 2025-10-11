@@ -16,15 +16,21 @@ export function AppRoutes () {
     <Routes>
       <Route path='/' element={<Navigate to='/home' replace />} />
       <Route path='/home' element={<HomePage />} />
-      <Route
-        path='/login' element={
-          <ProviderAuthContext>
-            <ProviderUserContext>
-              <Login />
-            </ProviderUserContext>
-          </ProviderAuthContext>
-    }
-      />
+      
+  <Route
+  path='/login'
+  element={
+    <ProviderAuthContext>
+      <ProviderUserContext>
+        <Login />
+      </ProviderUserContext>
+    </ProviderAuthContext>
+  }
+/>
+
+
+
+      
 
       <Route
         path='/adminPage' element={
