@@ -2,6 +2,8 @@
 
 This project was create for a donut business, the main idea is offer its products online.
 
+![alt text](image.png)
+
 ![Status](https://img.shields.io/badge/finished-green?style=for-the-badge)
 
 ## 📚 Table of Contents
