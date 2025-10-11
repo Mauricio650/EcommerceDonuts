@@ -1,6 +1,5 @@
 import '../css/card.css'
 import { AddIcon, MinusIcon, PlusIcon } from '../icons/icons'
-import { ContextCart } from '../../context/Cart'
 import { useCart } from '../../hooks/useCart'
 import { successToast } from '../../toast/toast'
 

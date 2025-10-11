@@ -2,8 +2,8 @@ import { SpinnerLoading } from '../components/SpinnerLoading'
 import '../components/css/marketHome.css'
 import { useGetProduct } from '../hooks/useGetProducts'
 import { Filters } from '../components/marketHome/Filters'
-import { CardProduct } from '../components/MarketHome/CardProduct'
 import { useFilters } from '../hooks/useFilters'
+import { CardProduct } from '../components/marketHome/CardProduct'
 
 export function MarketHome () {
   const { products, loading, error } = useGetProduct()
