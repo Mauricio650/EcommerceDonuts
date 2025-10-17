@@ -2,7 +2,7 @@ export function Schedule () {
   return (
     <div className='space-grotesk flex flex-col justify-center p-2 bg-[#FFFFFF] rounded shadow-lg shadow-black/30'>
       <div className='w-full py-3'>
-        <h2 className='text-md md:text-xl text-shadow-xs text-shadow-black'>Horario</h2>
+        <p className='text-md md:text-xl text-shadow-xs text-shadow-black'>Horario</p>
       </div>
       <div className='w-full flex'>
         <div className='w-[98%] h-[1px] bg-[#FEE5EE]' />

@@ -9,7 +9,7 @@ export function FormEmail () {
   return (
     <div className='space-grotesk w-full sm:w-1/2 flex flex-col justify-center p-2 bg-[#FFFFFF] rounded shadow-lg shadow-black/30'>
       <div className='w-full py-3'>
-        <h2 className='text-xl text-shadow-xs text-shadow-black'>Envia un email</h2>
+        <p className='text-xl text-shadow-xs text-shadow-black'>Envia un email</p>
       </div>
       <div className='w-full flex'>
         <div className='w-[98%] h-[1px] bg-[#FEE5EE]' />

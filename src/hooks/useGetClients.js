@@ -4,7 +4,7 @@ import { errorToast } from '../toast/toast'
 export function useGetClients () {
   const [clients, setClients] = useState([])
   const [loading, setLoading] = useState(true)
-  const [a,seta] = useState(false)
+  const [a, seta] = useState(false)
   const API_URL = import.meta.env.VITE_API_URL_LOCAL
 
   useEffect(() => {
@@ -34,5 +34,5 @@ export function useGetClients () {
   const uSetA = () => {
     seta(p => (!p))
   }
-  return { clients, loading,uSetA }
+  return { clients, loading, uSetA }
 }

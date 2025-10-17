@@ -11,7 +11,7 @@ export function ContactUsHome () {
         <section className='w-full flex flex-col sm:flex-row gap-5'>
           <FormEmail />
 
-          <section className='w-full sm:w-1/2 flex flex-col gap-2'>
+          <section className='w-full sm:w-1/2 flex flex-col gap-3'>
             <article className='w-full h-1/2'>
               <ContactInformation />
             </article>
@@ -38,6 +38,17 @@ export function ContactUsHome () {
             <p className='chewy-regular  text-2xl text-[#FD70A7] text-shadow-black text-shadow-xs'>📍 Parque hipódromo</p>
             <iframe
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d755.1963341453901!2d-74.77266829838516!3d10.927517039830631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5cdfc6ce004a3%3A0x8b3cb291c5be85b!2sParque%20Hip%C3%B3dromo!5e0!3m2!1ses-419!2sco!4v1758600094394!5m2!1ses-419!2sco'
+              width='100%' height='450'
+              style={{ border: 0, borderRadius: '5px' }}
+              allowFullScreen='' loading='lazy'
+              referrerPolicy='no-referrer-when-downgrade'
+            />
+          </div>
+
+          <div className='flex flex-col w-full'>
+            <p className='chewy-regular  text-2xl text-[#FD70A7] text-shadow-black text-shadow-xs'>📍 Parque Muvdi</p>
+            <iframe
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.4666902646404!2d-74.78261822423876!3d10.928076256376722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5cd61fba1b8b5%3A0xc98f76d4babb54e!2sParque%20Muvdi!5e0!3m2!1ses-419!2sco!4v1760650349893!5m2!1ses-419!2sco'
               width='100%' height='450'
               style={{ border: 0, borderRadius: '5px' }}
               allowFullScreen='' loading='lazy'

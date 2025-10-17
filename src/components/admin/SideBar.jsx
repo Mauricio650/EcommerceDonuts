@@ -1,7 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom'
 import { BagShop, HomeIcon, ListIcon, LogOutIcon, UserIcon } from '../icons/icons'
 import { useAuth } from '../../hooks/useAuth'
-import { size } from 'zod'
 
 export function SideBar ({ showSideBar }) {
   const location = useLocation()

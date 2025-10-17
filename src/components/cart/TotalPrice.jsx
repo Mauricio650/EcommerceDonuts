@@ -13,7 +13,7 @@ export function TotalPrice () {
   return (
     <article className='dancing-script gap-1 w-full p-1 sm:p-3 flex flex-col shadow-lg shadow-black/30 justify-center items-center bg-[#CC87A2] rounded'>
       <div className='flex justify-center items-center gap-2 sm:gap-3'>
-        <h1 className='text-xl text-shadow-xs text-shadow-black text-white'>Total price</h1>
+        <p className='text-xl text-shadow-xs text-shadow-black text-white'>Total price</p>
         <span className='text-xl md:text-2xl font-bold text-shadow-2xs text-shadow-white text-green-600'>{totalPrice.total.toLocaleString('es-CO')} $</span>
       </div>
 

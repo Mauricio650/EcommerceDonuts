@@ -10,7 +10,7 @@ export function CardForCart ({ url_img, name, price, id, quantity }) {
         <img className='w-[50px] md:w-[100px]' src={url_img} alt={`image of ${name}`} />
       </div>
       <div className='flex flex-col justify-center items-center gap-1'>
-        <h1 className='text-center text-[#FD70A7] text-shadow-xs text-shadow-black'>{name}</h1>
+        <p className='text-center text-[#FD70A7] text-shadow-xs text-shadow-black'>{name}</p>
         <span className='text-gray-500 font-bold text-shadow-xs text-shadow-black'>{Number(price).toLocaleString('es-CO')}</span>
       </div>
       <div className='h-full md:gap-2 py-2 flex flex-col sm:flex-row justify-center items-center  bg-[#FEE5EE]'>

@@ -10,11 +10,11 @@ export function CardItems ({ handleModal, id, name, price, units, toppings, url_
       </div>
 
       <div className='space-grotesk text-center'>
-        <h1 className='text-xl text-shadow-xs text-shadow-black/50'>{name}</h1>
+        <p className='text-xl text-shadow-xs text-shadow-black/50'>{name}</p>
         <span className='text-md text-shadow-xs text-shadow-black/50 text-[#FD70A7]'>{toppings}</span>
         <span className='text-md text-shadow-xs text-shadow-black text-gray-400 block'>{units} un</span>
       </div>
-      <h2 className='text-2xl text-shadow-xs text-shadow-black text-[#FD70A7] space-grotesk font-bold'>{Number(price).toLocaleString('es-CO')} $</h2>
+      <p className='text-2xl text-shadow-xs text-shadow-black text-[#FD70A7] space-grotesk font-bold'>{Number(price).toLocaleString('es-CO')} $</p>
       <aside className='card-container-btn flex justify-evenly  p-1 items-end bg-[#FCAAC8]/30 w-[90%] min-h-[60px] relative rounded'>
         <div onClick={handleModal} data-id={id} className='hover:scale-105 bg-[#FD70A7] p-2 rounded-full cursor-pointer'>
           <PencilIcon />

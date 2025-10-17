@@ -9,7 +9,7 @@ export function PayForm () {
   return (
     <div className='space-grotesk w-full  p-1 sm:p-2 h-full shadow-xl rounded-b-2xl flex flex-col justify-center bg-[#FFFFFF]'>
       <div className='w-full py-1 sm:py-3'>
-        <h2 className='text-md sm:text-xl'>Envianos tus datos y # de comprobante o referencia</h2>
+        <p className='text-md sm:text-xl'>Envianos los datos del domicilio y # de comprobante o referencia de pago</p>
       </div>
       <div className='w-full flex'>
         <div className='w-[98%] h-[1px] bg-[#FEE5EE]' />
